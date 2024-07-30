@@ -5,6 +5,7 @@
     height: 800px;
     /* 背景色 */
     background-color: yellow;
+    /* 後で書く */
     position: relative;
 }
 
@@ -16,15 +17,25 @@
 
 .box1{
     background-color: red;
+    /* z-index用 */
+    /* position: absolute;
+    top: 0;
+    z-index: 100; */
 }
 
 .box2{
     background-color: blue;
-    /* position: relative;
-    left: 300px; */
+    /* 最初に書く */
+    /* position: relative; */
+    /* 左にずらしたい */
+    /* left: 300px; */
+    /* 空中に浮いた */
     position: absolute;
+    /* 初期値を決める */
     top: 0;
+    /* 親の位置からずらしてみる */
     left: 300px;
+    /* z-index: 500 */
 }
 
 .box3{
