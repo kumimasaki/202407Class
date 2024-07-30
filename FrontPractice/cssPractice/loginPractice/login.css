@@ -25,7 +25,7 @@ h2{
 }
 
 .login-field-icon{
-    /* block要素はwidthを指定することができない */
+    /* inline要素はwidthを指定することができない */
     display: inline-block;
     width: 85px;
 }
@@ -42,4 +42,6 @@ h2{
     background-color: #3498DB;
     color: white;
     margin-top: 10px;
+    /* 罫線を上書きする */
+    border: 2px solid transparent;
 }
