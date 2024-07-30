@@ -1,0 +1,32 @@
+.parent-box{
+    /* 幅 */
+    width: 1000px;
+    /* 高さ */
+    height: 800px;
+    /* 背景色 */
+    background-color: yellow;
+    position: relative;
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+.box1{
+    background-color: red;
+}
+
+.box2{
+    background-color: blue;
+    /* position: relative;
+    left: 300px; */
+    position: absolute;
+    top: 0;
+    left: 300px;
+}
+
+.box3{
+    background-color: green;
+}
