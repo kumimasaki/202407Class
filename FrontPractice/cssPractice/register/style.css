@@ -1,0 +1,77 @@
+body {
+    /* 背景色 */
+    background-color: #3498DB;
+}
+
+.register {
+    /* 中央寄せ */
+    width: 600px;
+    margin: 100px auto;
+    /* 背景色 */
+    background-color: white;
+    /* 罫線の内側に余白 */
+    padding: 20px;
+    /* 角丸 */
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    color: #777;
+}
+
+.register-field-icon {
+    /* labelは「display:inline」なのでwidthの設定ができない */
+    display: inline-block;
+    width: 100px;
+    text-align: left;
+}
+
+/* 各ブロックを離す */
+.control-group {
+    /* 罫線の外側に余白 */
+    margin-bottom: 10px;
+    /* 中央寄せ */
+    text-align: center;
+}
+
+input {
+    text-align: center;
+    background-color: #ECF0F1;
+    /* 枠線を透明にする */
+    border: 2px solid transparent;
+    /* 角丸 */
+    border-radius: 3px;
+    font-size: 16px;
+    /* 罫線の内側に余白 */
+    padding: 10px 0;
+    /* 幅を設定 */
+    width: 250px;
+}
+
+.btn {
+    /* 枠線を透明にする */
+    border: 2px solid transparent;
+    background-color: #3498DB;
+    color: white;
+    font-size: 16px;
+    /* 幅を設定 */
+    width: 250px;
+    /* 罫線の内側に余白 */
+    padding: 10px 0;
+    /* 罫線の外側に余白 */
+    margin-top: 40px;
+    /* 角丸 */
+    border-radius: 3px;
+}
+
+.btn:hover {
+    background-color: #2980B9;
+}
+
+.register-link {
+    font-size: 12px;
+    color: #444;
+    display: block;
+    margin-top: 12px;
+}

@@ -1,0 +1,88 @@
+body {
+    font-family: Arial;
+    background-color: #3498DB;
+}
+
+/* 全体に設定 */
+.register {
+    /* widthとmargin autoで中央寄せ */
+    width: 600px;
+    margin: 100px auto;
+    /* 背景色 */
+    background-color: #FFF;
+    /*罫線の内側に余白*/
+    padding: 20px;
+    /* 角丸 */
+    border-radius: 5px
+}
+
+/* 見出し */
+h1{
+    text-align: center;
+    color: #777;
+}
+
+/* ラベルに対する設定 */
+.register-field-icon {
+    /* labelはインラインなので幅を決められるようにinline-blockにする */
+    display: inline-block;/*要素がインラインとブロックの特性を両方持つ*/
+    width: 100px; /* ラベルの幅を決めるから綺麗に並ぶ */
+    /* 文字を左に寄せる */
+    text-align: left;/*インライン要素はブロック要素の中に入れないとtext-alignが効かない*/
+}
+
+/*各ブロックを離す*/
+.control-group {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/*inputタグの装飾*/
+/*要素に対して境界線（border）を2ピクセルの幅で設定し、
+ その境界線のスタイルを「solid」（実線）にし、
+ 色は透明（transparent）*/
+/*https://saruwakakun.com/html-css/reference/box-sizing#section1*/
+input {
+    text-align: center;
+    background-color: #ECF0F1;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    font-size: 16px;
+    /*文字の太さ*/
+    padding: 10px 0;
+    width: 250px;
+}
+
+/*
+*インライン要素ではありますが、厳密にいうとinline-blockつまり、
+*ブロック要素とインライン要素の中間になるので、横幅を設定することができる
+* dev2で確認できる
+*/
+.btn {
+    border: 2px solid transparent;
+    background: #3498DB;
+    color: #ffffff;
+    font-size: 16px;
+    width: 250px;
+    padding: 10px 0;
+    border-radius: 3px;
+    margin-top: 40px;
+}
+
+.btn:hover {
+    background-color: #2980B9;
+}
+
+.register-link {
+    font-size: 12px;
+    color: #444;
+    display: block;
+    margin-top: 12px;
+}
+
+/*
+*labelやaタグspanタグは昨日の授業でやったインライン要素になります。
+*インライン要素は例えば文字の一部だけ装飾を変えるなどの目的で文字を囲って使用されます。
+*こういった用途からも、インライン要素にはそもそもwidthの設定は不要な場合が多いです。
+*そのため、widthの設定ができません。
+*/
