@@ -1,0 +1,4 @@
+carrot
+potato
+meat
+onion

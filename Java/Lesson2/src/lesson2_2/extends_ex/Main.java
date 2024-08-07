@@ -23,7 +23,7 @@ public class Main {
 		// Animalしか見れない + 猫独自のものなので使うことはできない
 //		System.out.println(kitty.color);
 		
-		System.out.println(kitty.name);
+		System.out.println(kitty.age);
 		kitty.sounds();
 		
 		// ポリモーフィズムのメリット

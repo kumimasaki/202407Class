@@ -5,11 +5,13 @@ public class Cat extends Animal implements Runnable{
 	// メンバ変数(猫クラス独自のメンバ変数)
 	// 色
 	String color;
+//	int age;
 
 	// コンストラクタ
 	public Cat(String name, int age, String color) {
 		super(name, age);
 		this.color = color;
+//		this.age = 10;
 	}
 
 	// メソッド（猫独自）
