@@ -4,7 +4,10 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
@@ -53,8 +56,27 @@ public class StudentDaoImpl implements StudentDao{
 
 	@Override
 	public List<StudentDto> findAll() {
-		// TODO 自動生成されたメソッド・スタブ
-		return null;
+		// SQLの作成
+		String sql = "SELECT * FROM student";
+		List<StudentDto> result = new ArrayList<>();
+		try(Statement smt = con.createStatement()){
+			// 実行
+			ResultSet rs = smt.executeQuery(sql);
+			// resultに取得結果を入れる
+			while(rs.next()) {
+				result.add(new StudentDto(
+						rs.getInt("id"),
+						rs.getString("name"),
+						rs.getInt("age"),
+						rs.getString("subject"),
+						rs.getString("gender")
+				));
+			}
+		} catch (SQLException e) {
+			System.out.println("データを取得出来ませんでした");
+			e.printStackTrace();
+		}
+		return result;
 	}
 
 	@Override
@@ -80,13 +102,14 @@ public class StudentDaoImpl implements StudentDao{
 
 	@Override
 	public void close() {
-		// TODO 自動生成されたメソッド・スタブ
-		
+		// DBとの接続を切る
+		if (con != null) {
+			try {
+				con.close();
+			} catch (SQLException e) {
+				System.out.println("データベースを閉じることができませんでした");
+				e.printStackTrace();
+			}
+		}
 	}
-	
-	
-	
-	
-	
-	
 }
