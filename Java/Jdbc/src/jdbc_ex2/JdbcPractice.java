@@ -14,7 +14,7 @@ public class JdbcPractice {
 
 	public static void main(String[] args) {
 		// practiceメソッドの呼び出し
-		practice();
+		pokemon();
 	}
 	
     // Hello倉庫の中のポケモンテーブルから全てのデータを抽出して出力してください
@@ -25,7 +25,7 @@ public class JdbcPractice {
 	//	id:37,name:Vulpix,type_id:10
 	//	id:46,name:Paras,type_id:7
 	//	id:133,name:Eevee,type_id:1
-	public static void practice() {
+	public static void pokemon() {
 		// 1:ドライバの登録
 		Driver driver = new Driver();
 		// 外部ファイルの読み込み
