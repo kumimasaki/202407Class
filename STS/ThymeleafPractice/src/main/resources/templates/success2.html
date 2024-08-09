@@ -10,15 +10,11 @@
 </head>
 
 <body>
-   <h1>ログインが成功しました</h1>
-    <p th:text="${userEmail}"></p>
-    <p th:text="${userPassword}"></p>
-	
-	<ul th:each="data : ${array}">
-		<li th:text="${data}"></li>
-	</ul>
-	<p th:text="${alice.name}"></p>
-	<p th:text="${alice.age}"></p>
+   <h1>登録が成功しました</h1>
+   <!-- ユーザー名、メールアドレス、パスワード-->
+   <p th:text="${userName}"></p>
+   <p th:text="${userEmail}"></p>
+   <p th:text="${userPassword}"></p>
 </body>
 
 </html>

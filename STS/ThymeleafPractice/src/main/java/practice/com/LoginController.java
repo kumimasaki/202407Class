@@ -11,7 +11,8 @@ import org.springframework.web.servlet.ModelAndView;
 public class LoginController {
 	// ログイン画面を表示
 	@GetMapping("/login")
-	public String getLoginPage() {
+	public String getLoginPage(Model model) {
+		model.addAttribute("error", false);
 		return "login.html";
 	}
 	
@@ -24,10 +25,23 @@ public class LoginController {
 	
 	@PostMapping("/login/process")
 	public ModelAndView login(@RequestParam String email, @RequestParam String password, ModelAndView mav) {
-		mav.addObject("userEmail", email);
-		mav.addObject("userPassword", password);
-		mav.setViewName("success.html");
-		return mav;
+		String[] test = {"aa", "bb", "cc", "dd"};
+		Cat cat = new Cat("Alice", 3);
+		
+		// もしメールアドレスが「test@test.com」で
+		// かつパスワードが「admin」だった場合は「success.html」を表示
+		if(email.equals("test@test.com") && password.equals("admin")) {
+			mav.addObject("userEmail", email);
+			mav.addObject("userPassword", password);
+			mav.addObject("array", test);
+			mav.addObject("alice", cat);
+			mav.setViewName("success.html");
+			return mav;
+		} else {
+			mav.addObject("error", true);
+			mav.setViewName("login.html");
+			return mav;
+		}
 	}
 	
 }
