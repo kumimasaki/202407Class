@@ -15,9 +15,9 @@
     </header>
     <main>
         <div class="error-msg">
-             <p>メールアドレスまたはパスワードが間違っています</p>
+             <p th:if="${error}">メールアドレスまたはパスワードが間違っています</p>
         </div>
-        <form method="post" action="">
+        <form method="post" th:action="@{/login/process}">
             <div class="user-login-form">
              <div class="form-row">
                 <label for="email">メールアドレス</label>
