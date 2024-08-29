@@ -1,0 +1,67 @@
+2024-08-19T08:26:12.955+09:00  INFO 19468 --- [EC] [main] ec.com.EcApplication                     : Starting EcApplication using Java 17.0.10 with PID 19468 (C:\work\Github\202407\202407Class\STS\EC\EC\target\classes started by masak in C:\work\Github\202407\202407Class\STS\EC\EC)
+2024-08-19T08:26:12.963+09:00  INFO 19468 --- [EC] [main] ec.com.EcApplication                     : No active profile set, falling back to 1 default profile: "default"
+2024-08-19T08:26:13.828+09:00  INFO 19468 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-19T08:26:13.935+09:00  INFO 19468 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91 ms. Found 2 JPA repository interfaces.
+2024-08-19T08:26:14.847+09:00  INFO 19468 --- [EC] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-19T08:26:14.867+09:00  INFO 19468 --- [EC] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-19T08:26:14.867+09:00  INFO 19468 --- [EC] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-08-19T08:26:14.951+09:00  INFO 19468 --- [EC] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-19T08:26:14.951+09:00  INFO 19468 --- [EC] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1916 ms
+2024-08-19T08:26:15.158+09:00  INFO 19468 --- [EC] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-19T08:26:15.284+09:00  INFO 19468 --- [EC] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-08-19T08:26:15.373+09:00  INFO 19468 --- [EC] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-19T08:26:15.780+09:00  INFO 19468 --- [EC] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-19T08:26:15.840+09:00  INFO 19468 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-19T08:26:16.140+09:00  INFO 19468 --- [EC] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3973b6d4
+2024-08-19T08:26:16.143+09:00  INFO 19468 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-19T08:26:16.233+09:00  WARN 19468 --- [EC] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-19T08:26:17.587+09:00  INFO 19468 --- [EC] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-19T08:26:17.691+09:00  INFO 19468 --- [EC] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-19T08:26:18.178+09:00  WARN 19468 --- [EC] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-19T08:26:18.810+09:00  INFO 19468 --- [EC] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-08-19T08:26:18.820+09:00  INFO 19468 --- [EC] [main] ec.com.EcApplication                     : Started EcApplication in 6.731 seconds (process running for 7.655)
+2024-08-19T08:26:20.057+09:00  INFO 19468 --- [EC] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-19T08:26:20.058+09:00  INFO 19468 --- [EC] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-19T08:26:20.060+09:00  INFO 19468 --- [EC] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-08-19T08:26:28.734+09:00 DEBUG 19468 --- [EC] [http-nio-8080-exec-6] org.hibernate.SQL                        : select a1_0.admin_id,a1_0.admin_email,a1_0.admin_name,a1_0.password from admin a1_0 where a1_0.admin_email=? and a1_0.password=?
+2024-08-19T08:26:28.819+09:00 DEBUG 19468 --- [EC] [http-nio-8080-exec-9] org.hibernate.SQL                        : select p1_0.product_id,p1_0.admin_id,p1_0.product_category,p1_0.product_description,p1_0.product_image,p1_0.product_name from products p1_0
+2024-08-19T08:26:36.388+09:00 DEBUG 19468 --- [EC] [http-nio-8080-exec-1] org.hibernate.SQL                        : select p1_0.product_id,p1_0.admin_id,p1_0.product_category,p1_0.product_description,p1_0.product_image,p1_0.product_name from products p1_0 where p1_0.product_id=?
+2024-08-19T08:26:40.531+09:00  INFO 19468 --- [EC] [RMI TCP Connection(7)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-08-19T08:26:40.545+09:00  INFO 19468 --- [EC] [RMI TCP Connection(7)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-19T08:26:40.547+09:00  INFO 19468 --- [EC] [RMI TCP Connection(7)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-19T08:26:40.551+09:00  INFO 19468 --- [EC] [RMI TCP Connection(7)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-19T09:06:35.680+09:00  INFO 17436 --- [EC] [main] ec.com.EcApplication                     : Starting EcApplication using Java 17.0.10 with PID 17436 (C:\work\Github\202407\202407Class\STS\EC\EC\target\classes started by masak in C:\work\Github\202407\202407Class\STS\EC\EC)
+2024-08-19T09:06:35.684+09:00  INFO 17436 --- [EC] [main] ec.com.EcApplication                     : No active profile set, falling back to 1 default profile: "default"
+2024-08-19T09:06:37.279+09:00  INFO 17436 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-19T09:06:37.474+09:00  INFO 17436 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 164 ms. Found 2 JPA repository interfaces.
+2024-08-19T09:06:38.923+09:00  INFO 17436 --- [EC] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-19T09:06:38.954+09:00  INFO 17436 --- [EC] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-19T09:06:38.954+09:00  INFO 17436 --- [EC] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-08-19T09:06:39.055+09:00  INFO 17436 --- [EC] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-19T09:06:39.056+09:00  INFO 17436 --- [EC] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3307 ms
+2024-08-19T09:06:39.273+09:00  INFO 17436 --- [EC] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-19T09:06:39.382+09:00  INFO 17436 --- [EC] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-08-19T09:06:39.439+09:00  INFO 17436 --- [EC] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-19T09:06:39.829+09:00  INFO 17436 --- [EC] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-19T09:06:39.882+09:00  INFO 17436 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-19T09:06:40.172+09:00  INFO 17436 --- [EC] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@45b96e4c
+2024-08-19T09:06:40.175+09:00  INFO 17436 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-19T09:06:40.264+09:00  WARN 17436 --- [EC] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-19T09:06:42.443+09:00  INFO 17436 --- [EC] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-19T09:06:42.536+09:00  INFO 17436 --- [EC] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-19T09:06:43.271+09:00  WARN 17436 --- [EC] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-19T09:06:44.161+09:00  INFO 17436 --- [EC] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-08-19T09:06:44.175+09:00  INFO 17436 --- [EC] [main] ec.com.EcApplication                     : Started EcApplication in 9.195 seconds (process running for 10.453)
+2024-08-19T09:06:46.148+09:00  INFO 17436 --- [EC] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-19T09:06:46.150+09:00  INFO 17436 --- [EC] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-19T09:06:46.153+09:00  INFO 17436 --- [EC] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-08-19T09:06:49.964+09:00 DEBUG 17436 --- [EC] [http-nio-8080-exec-4] org.hibernate.SQL                        : select a1_0.admin_id,a1_0.admin_email,a1_0.admin_name,a1_0.password from admin a1_0 where a1_0.admin_email=? and a1_0.password=?
+2024-08-19T09:06:50.045+09:00  WARN 17436 --- [EC] [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2024-08-19T09:06:53.513+09:00 DEBUG 17436 --- [EC] [http-nio-8080-exec-6] org.hibernate.SQL                        : select a1_0.admin_id,a1_0.admin_email,a1_0.admin_name,a1_0.password from admin a1_0 where a1_0.admin_email=? and a1_0.password=?
+2024-08-19T09:06:53.624+09:00 DEBUG 17436 --- [EC] [http-nio-8080-exec-5] org.hibernate.SQL                        : select p1_0.product_id,p1_0.admin_id,p1_0.product_category,p1_0.product_description,p1_0.product_image,p1_0.product_name from products p1_0
+2024-08-19T09:08:53.957+09:00 DEBUG 17436 --- [EC] [http-nio-8080-exec-2] org.hibernate.SQL                        : select p1_0.product_id,p1_0.admin_id,p1_0.product_category,p1_0.product_description,p1_0.product_image,p1_0.product_name from products p1_0 where p1_0.product_id=?
+2024-08-19T09:10:00.999+09:00 DEBUG 17436 --- [EC] [http-nio-8080-exec-7] org.hibernate.SQL                        : select p1_0.product_id,p1_0.admin_id,p1_0.product_category,p1_0.product_description,p1_0.product_image,p1_0.product_name from products p1_0 where p1_0.product_id=?
+2024-08-19T09:22:31.199+09:00  INFO 17436 --- [EC] [RMI TCP Connection(25)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-08-19T09:22:31.218+09:00  INFO 17436 --- [EC] [RMI TCP Connection(25)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-19T09:22:31.222+09:00  INFO 17436 --- [EC] [RMI TCP Connection(25)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-19T09:22:31.229+09:00  INFO 17436 --- [EC] [RMI TCP Connection(25)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
