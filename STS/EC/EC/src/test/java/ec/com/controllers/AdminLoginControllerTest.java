@@ -123,10 +123,10 @@ public class AdminLoginControllerTest {
 	public void testUserEntityIsNullInSession() throws Exception {
 	    // GETリクエストを送信してセッションを取得
 	    HttpSession session = mockMvc.perform(get("/admin/login"))
-							.andExpect(status().isOk())
-							.andReturn()
-							.getRequest()
-							.getSession();
+					                .andExpect(status().isOk()) // ステータスが200 OKであることを期待
+					                .andReturn()   // リクエストとレスポンスの結果を返す
+					                .getRequest()  // リクエストを取得
+					                .getSession(); // リクエストからセッションを取得
 	    
 	    // セッションからUserEntityを取得してnullであることを検証
 	    Object userInSession = session.getAttribute("loginAdminInfo");
