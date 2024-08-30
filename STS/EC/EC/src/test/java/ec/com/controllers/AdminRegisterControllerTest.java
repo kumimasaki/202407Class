@@ -35,9 +35,9 @@ public class AdminRegisterControllerTest {
 	public void prepareData() {
 		// ユーザーの情報を作成する（Entityの内容を返すので）
 		Admin alice = new Admin(1L, "test@test.com", "Alice", "12345678");
-		// ログインが成功：　username "Alice"、　password "12345678"　true
+		// 登録が成功
 		when(adminService.createAdmin("test@test.com", "Alice", "12345678")).thenReturn(true);
-		// ログインが失敗：　username "Ana"と等しい、　パスワードはどんな値でもいい　false
+		// 登録が失敗
 		when(adminService.createAdmin(eq("ng@test.com"), any(), any())).thenReturn(false);
 	}
 	

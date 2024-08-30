@@ -41,9 +41,9 @@ public class AdminLoginControllerTest {
 	public void prepareData() {
 		// ユーザーの情報を作成する（Entityの内容を返すので）
 		Admin alice = new Admin(1L, "test@test.com", "Alice", "12345678");
-		// ログインが成功：　username "Alice"、　password "12345678"　true
+		// ログインが成功
 		when(adminService.loginCheck("test@test.com", "12345678")).thenReturn(alice);
-		// ログインが失敗：　username "Ana"と等しい、　パスワードはどんな値でもいい　false
+		// ログインが失敗
 		when(adminService.loginCheck(eq("ng@test.com"), any())).thenReturn(null);
 	}
 	
@@ -66,7 +66,7 @@ public class AdminLoginControllerTest {
 								.param("password", "12345678");
 		
 		mockMvc.perform(request)
-		// ログインエンティティのユーザー名,パスワードが○○であることを確認
+				// ログインエンティティのユーザー名,パスワードが○○であることを確認
 //				.andExpect(model().attribute("adminName", "Alice"))
 //				.andExpect(model().attribute("adminEmail", "test@test.com"))
 				.andExpect(redirectedUrl("/product/list"));
