@@ -95,6 +95,8 @@ public class AdminLoginControllerTest {
 		// リクエストを実行してレスポンスを取得
 		MvcResult result = mockMvc.perform(request)
 							.andExpect(redirectedUrl("/product/list"))
+							// ModelAndViewを使っている方はこちら↓
+//							.andExpect(view().name("redirect:/blog/list"))
 							.andReturn();
 		
 		// セッションから "admin" を取得して null ではないことを確認
