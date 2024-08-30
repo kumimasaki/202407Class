@@ -38,6 +38,7 @@ public class AdminLoginController {
 			return "admin_login.html";
 		}else {
 			session.setAttribute("loginAdminInfo", admin);
+//			model.addAttribute("username", admin.getAdminName());
 			return "redirect:/product/list";
 		}
 		
