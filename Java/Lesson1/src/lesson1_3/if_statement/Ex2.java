@@ -5,6 +5,7 @@ public class Ex2 {
 	public static void main(String[] args) {
 		// もし、scoreが90点より大きければ「A評価」
 		// そうではなく、もし点数が60点より大きければ「B評価」
+		// そうではなく、もし点数が30点より大きければ「C評価」
 		// それ以外は「不合格」
 		int score = 100;
 		

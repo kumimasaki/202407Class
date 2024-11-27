@@ -1,5 +1,7 @@
 package lesson1_2.practice;
-
+/**
+ * problems1-2 三.パリティチェック
+ */
 public class Practice2 {
 
 	public static void main(String[] args) {

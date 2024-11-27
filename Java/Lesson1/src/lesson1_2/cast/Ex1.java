@@ -13,7 +13,7 @@ public class Ex1 {
 		
 		// 大きい型を小さい型に入れる
 		double height = 150.5;
-		// int型のbに　double型のheightを代入
+		// int型のbに double型のheightを代入
 		int b = (int) height;
 		System.out.println(b);
 

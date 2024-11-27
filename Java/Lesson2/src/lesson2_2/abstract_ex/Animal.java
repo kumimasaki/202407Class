@@ -4,7 +4,6 @@ public abstract class Animal {
 	// メンバ変数
 	String name;
 
-	
 	// コンストラクタ
 	public Animal(String name) {
 		this.name = name;

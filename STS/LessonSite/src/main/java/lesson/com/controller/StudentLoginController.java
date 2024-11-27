@@ -92,7 +92,7 @@ public class StudentLoginController {
 	public String getResetPasswordMail(@RequestParam String userEmail,Model model) {
 		String uuIdMail = uuIdService.createUUID(userEmail);
 		SimpleMailMessage msg = new SimpleMailMessage();
-		msg.setFrom("a.izawa@rootcox.sakura.ne.jp"); // 送信元メールアドレス
+		msg.setFrom("masaki.kmkm@gmail.com"); // 送信元メールアドレス
 		msg.setTo(userEmail); // 送信先メールアドレス
 		msg.setSubject("パスワード変更メール"); // タイトル               
 		msg.setText("以下のリンクを1時間以内にクリックして下さい"+"http://localhost:8080/user/password/change/"+uuIdMail); //本文

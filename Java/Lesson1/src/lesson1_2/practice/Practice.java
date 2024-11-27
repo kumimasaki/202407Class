@@ -6,7 +6,7 @@ public class Practice {
 		// 問題1
 		// 変数名 hobby 値：読書 初期化してください
 		String hobby = "読書";
-		// 変数名 readTime 値：2.5(doubleを使用）初期化してください
+		// 変数名 readTime 値：2.5 初期化してください
 		double readTime = 2.5;
 		// 実行結果（コンソールに出力）
 		// 「私の趣味は読書で2.5時間を使って趣味を楽しみます」

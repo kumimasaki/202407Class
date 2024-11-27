@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <!-- <div style="align-items:center ;display:flex">
+    <p class="title">My Blog</p>
+  </div> -->
+
+  <!-- 导航条部分 -->
+  <div class="container">
+    <p class="title">My Blog</p>
+</div>
+
+ <!-- 内容部分 -->
+ <!-- style="height: 1000px; overflow: scroll;" -->
+<div class="box">
+  <div class="box1">
+
+    <div>
+        <p class="t1">Title</p>
+        <p class="content1">About Menu</p>
+    </div>
+  
+
+    <div>
+        <p class="t2">Username</p>
+        <p class="content2">zoun</p>
+    </div>
+
+    <div>
+        <p class="t3">Content</p>
+        <p class="content3">Mew is one of the fictional species of
+            <br>creatures from Nintendo and Game <br>freak Pokemon media franchise 
+            created<br> bySatoshi Tajinri.Mew is a small,
+            pink<br>,cat-like,Psychic-type Mythical <br>Pokemon?
+        </p>
+    </div>
+
+  </div>
+
+  <div class="box2">
+
+    <div>
+        <p class="t1-2">Title</p>
+        <p class="content1-2">三国</p>
+    </div>
+  
+
+    <div>
+        <p class="t2-2">Username</p>
+        <p class="content2-2">you</p>
+    </div>
+
+    <div>
+        <p class="t3-2">Content</p>
+        <p class="content3-2">三国是中国历史一段三个国家并立的时期<br>
+                              ,也是魏南北朝和六朝的开战时期。一般认<br>
+                              般认为是从建安元年起算。三国是指曹魏，<br>
+                              蜀汉及孙吴。东汉末年战争步段，使得人口<br>
+                              急剧下降。经济严重损害，因此
+        </p>
+    </div>
+
+  </div>
+</div>
+    <style>
+        body{
+            padding: 0px;
+            margin: 0px;
+           
+        }
+        /* .title{
+            width:100%;
+            height:65px ;
+            background-color: black;
+            color: white;
+            font-size: 20px;
+            position: fixed;
+            border-bottom: 1px solid rgb(236, 229, 229);
+            margin-top: 0px;
+            padding-left: 20px;
+            line-height: 1;
+            
+        } */
+        .container {
+            width: 100%;
+            height: 65px;
+            background-color: black;
+            position: fixed;
+            border-bottom: 1px solid rgb(236, 229, 229);
+            margin-top: 0px;
+            z-index: 99;
+        }
+        .title {
+            color: white;
+            font-size: 20px;
+            padding-left: 20px;
+            display: flex;
+            align-items: center;
+            /* 垂直居中 */
+            height: 100%;
+            margin: 0;
+            /* 去掉默认的p标签上下间距 */
+        }
+        /* 想要划动下划线的时候不要遮盖页眉 */
+       /* .box{
+           
+        }*/
+
+        .box1{
+            width: 710px;
+            /* height: px; */
+            /* background-color: black; */
+            position:absolute; 
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            /* background-color: black; */
+            border-radius: 6px;
+            margin: 0px;
+        }
+        .t1{
+            width: 50%;
+            height: 60px;
+            background-color: black;
+            color: rgb(21, 233, 233);
+            font-size: larger;
+            /* margin-left: 48px; */
+            padding-top: 10px;
+            margin: 0px;
+            overflow: hidden;
+            left: 0px;
+            padding-left: 10px;
+  
+        }
+        .content1{
+            
+            background-color: black;
+            width: 50%;
+            height: 60px;
+            background-color: black;
+            color: rgb(222, 231, 231);
+            font-size: larger;
+            /* margin-right: 48px; */
+            padding-top: 10px;
+            margin: 0px;
+            position:fixed;
+            right: 0px;
+            top: 0px;
+            overflow: hidden;
+            /* padding-left: 10px; */
+         
+            
+        }
+       
+        .t2{
+            width: 50%;
+            height: 60px;
+            background-color: rgb(63, 59, 59);
+            color: rgb(21, 233, 233);
+            font-size: larger;
+            padding-left: 10px;
+            padding-top: 10px;
+            margin: 0px;
+        }
+        .content2{
+           
+            width: 50%;
+            height: 60px;
+            background-color:  rgb(63, 59, 59);
+            color: blue;
+            font-size: larger;
+            /* margin-right: 48px; */
+            padding-top: 10px;
+            padding-left: 10px;
+            margin: 0px;
+            position:fixed;
+            right: 0px;
+            top: 70px;
+            overflow: hidden;
+          
+         
+        }
+        .t3{
+            width: 700px;
+            height: 200px;
+            background-color: black;
+            color: rgb(21, 233, 233);
+            font-size: larger;
+            padding-left: 10px;
+            padding-top: 10px;
+            margin: 0px;
+        }
+        .content3{
+            width: 50%;
+            height: 200px;
+            background-color:  black;
+            color: rgb(225, 225, 230);
+          
+            /* margin-right: 48px; */
+            padding-top: 10px;
+            padding-left: 10px;
+            margin: 0px;
+            position:fixed;
+            right: 0px;
+            top: 140px;
+            overflow: hidden;
+        }
+/* ::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #4B5563;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar:hover {
+  width: 7px;
+  height: 7px;
+} */
+
+
+.box2{
+            width: 710px;
+            /* height: px; */
+            /* background-color: black; */
+            position:relative;
+            top: 800px;
+            /* transform: translate(-50%,-50%); */
+            /* background-color: black; */
+            border-radius: 6px;
+            margin: 0px;
+           
+          
+            left: 50%;
+            transform: translate(-50%,-50%);
+            /* background-color: black; */
+        }
+        .t1-2{
+            width: 50%;
+            height: 60px;
+            background-color: black;
+            color: rgb(21, 233, 233);
+            font-size: larger;
+            /* margin-left: 48px; */
+            padding-top: 10px;
+            margin: 0px;
+            overflow: hidden;
+            left: 0px;
+            padding-left: 10px;
+  
+        }
+        .content1-2{
+            
+            background-color: black;
+            width: 50%;
+            height: 60px;
+            background-color: black;
+            color: rgb(222, 231, 231);
+            font-size: larger;
+            /* margin-right: 48px; */
+            padding-top: 10px;
+            margin: 0px;
+            position:fixed;
+            right: 0px;
+            top: 0px;
+            overflow: hidden;
+            /* padding-left: 10px; */
+         
+            
+        }
+       
+        .t2-2{
+            width: 50%;
+            height: 60px;
+            background-color: rgb(63, 59, 59);
+            color: rgb(21, 233, 233);
+            font-size: larger;
+            padding-left: 10px;
+            padding-top: 10px;
+            margin: 0px;
+        }
+        .content2-2{
+           
+            width: 50%;
+            height: 60px;
+            background-color:  rgb(63, 59, 59);
+            color: blue;
+            font-size: larger;
+            /* margin-right: 48px; */
+            padding-top: 10px;
+            padding-left: 10px;
+            margin: 0px;
+            position:fixed;
+            right: 0px;
+            top: 70px;
+            overflow: hidden;
+          
+         
+        }
+        .t3-2{
+            width: 700px;
+            height: 200px;
+            background-color: black;
+            color: rgb(21, 233, 233);
+            font-size: larger;
+            padding-left: 10px;
+            padding-top: 10px;
+            margin: 0px;
+        }
+        .content3-2{
+            width: 50%;
+            height: 200px;
+            background-color:  black;
+            color: rgb(225, 225, 230);
+          
+            /* margin-right: 48px; */
+            padding-top: 10px;
+            padding-left: 10px;
+            margin: 0px;
+            position:fixed;
+            right: 0px;
+            top: 140px;
+            overflow: hidden;
+        }
+    </style>
+</body>
+</html>

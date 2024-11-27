@@ -92,7 +92,7 @@ public class AdminLessonController {
 	public String editLesson(@RequestParam Long lessonId,
 			@RequestParam(name = "startDate") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate startDate,
 			@RequestParam(name = "startTime") @DateTimeFormat(iso = DateTimeFormat.ISO.TIME) LocalTime startTime,
-			@RequestParam(name = "finishTime") @DateTimeFormat(iso = DateTimeFormat.ISO.TIME) LocalTime finishTime,
+			@RequestParam(name = "endTime") @DateTimeFormat(iso = DateTimeFormat.ISO.TIME) LocalTime finishTime,
 			@RequestParam String lessonName, @RequestParam String lessonDetail, @RequestParam int lessonFee,
 			@RequestParam String imageName, Model model) {
 		AdminEntity admin = (AdminEntity) session.getAttribute("admin");

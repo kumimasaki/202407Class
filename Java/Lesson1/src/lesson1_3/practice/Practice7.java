@@ -10,7 +10,5 @@ public class Practice7 {
 			System.out.println(cars[i]);
 			i++;
 		} while(i < cars.length);
-
 	}
-
 }

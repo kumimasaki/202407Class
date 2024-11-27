@@ -1,298 +1,148 @@
-2024-08-30T08:08:23.031+09:00  INFO 4904 --- [EC] [main] e.c.c.AdminLoginControllerTest           : Starting AdminLoginControllerTest using Java 17.0.10 with PID 4904 (started by masak in C:\work\Github\202407\202407Class\STS\EC\EC)
-2024-08-30T08:08:23.043+09:00  INFO 4904 --- [EC] [main] e.c.c.AdminLoginControllerTest           : No active profile set, falling back to 1 default profile: "default"
-2024-08-30T08:08:24.987+09:00  INFO 4904 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-30T08:08:25.140+09:00  INFO 4904 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 120 ms. Found 2 JPA repository interfaces.
-2024-08-30T08:08:29.457+09:00  INFO 4904 --- [EC] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-30T08:08:29.795+09:00  INFO 4904 --- [EC] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-08-30T08:08:29.983+09:00  INFO 4904 --- [EC] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-08-30T08:08:30.634+09:00  INFO 4904 --- [EC] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-30T08:08:30.770+09:00  INFO 4904 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-08-30T08:08:31.297+09:00  INFO 4904 --- [EC] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@346b793b
-2024-08-30T08:08:31.304+09:00  INFO 4904 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-08-30T08:08:31.553+09:00  WARN 4904 --- [EC] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-08-30T08:08:33.909+09:00  INFO 4904 --- [EC] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-30T08:08:34.019+09:00  INFO 4904 --- [EC] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-30T08:08:35.073+09:00  WARN 4904 --- [EC] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-30T08:08:36.159+09:00  INFO 4904 --- [EC] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-08-30T08:08:36.159+09:00  INFO 4904 --- [EC] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-08-30T08:08:36.161+09:00  INFO 4904 --- [EC] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2024-08-30T08:08:36.199+09:00  INFO 4904 --- [EC] [main] e.c.c.AdminLoginControllerTest           : Started AdminLoginControllerTest in 13.923 seconds (process running for 18.222)
-2024-08-30T08:08:37.886+09:00  INFO 4904 --- [EC] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-30T08:08:37.890+09:00  INFO 4904 --- [EC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-08-30T08:08:37.897+09:00  INFO 4904 --- [EC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-08-30T08:09:09.867+09:00  INFO 27892 --- [EC] [main] e.c.c.AdminLoginControllerTest           : Starting AdminLoginControllerTest using Java 17.0.10 with PID 27892 (started by masak in C:\work\Github\202407\202407Class\STS\EC\EC)
-2024-08-30T08:09:09.870+09:00  INFO 27892 --- [EC] [main] e.c.c.AdminLoginControllerTest           : No active profile set, falling back to 1 default profile: "default"
-2024-08-30T08:09:11.058+09:00  INFO 27892 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-30T08:09:11.172+09:00  INFO 27892 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 92 ms. Found 2 JPA repository interfaces.
-2024-08-30T08:09:14.391+09:00  INFO 27892 --- [EC] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-30T08:09:14.665+09:00  INFO 27892 --- [EC] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-08-30T08:09:14.839+09:00  INFO 27892 --- [EC] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-08-30T08:09:15.434+09:00  INFO 27892 --- [EC] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-30T08:09:15.565+09:00  INFO 27892 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-08-30T08:09:16.061+09:00  INFO 27892 --- [EC] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6799cded
-2024-08-30T08:09:16.068+09:00  INFO 27892 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-08-30T08:09:16.163+09:00  WARN 27892 --- [EC] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-08-30T08:09:18.441+09:00  INFO 27892 --- [EC] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-30T08:09:18.501+09:00  INFO 27892 --- [EC] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-30T08:09:19.599+09:00  WARN 27892 --- [EC] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-30T08:09:20.360+09:00  INFO 27892 --- [EC] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-08-30T08:09:20.361+09:00  INFO 27892 --- [EC] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-08-30T08:09:20.363+09:00  INFO 27892 --- [EC] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-2024-08-30T08:09:20.397+09:00  INFO 27892 --- [EC] [main] e.c.c.AdminLoginControllerTest           : Started AdminLoginControllerTest in 11.253 seconds (process running for 13.994)
-2024-08-30T08:09:21.259+09:00  INFO 27892 --- [EC] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-30T08:09:21.262+09:00  INFO 27892 --- [EC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-08-30T08:09:21.266+09:00  INFO 27892 --- [EC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-08-30T08:10:36.234+09:00  INFO 13792 --- [EC] [main] e.c.c.AdminLoginControllerTest           : Starting AdminLoginControllerTest using Java 17.0.10 with PID 13792 (started by masak in C:\work\Github\202407\202407Class\STS\EC\EC)
-2024-08-30T08:10:36.237+09:00  INFO 13792 --- [EC] [main] e.c.c.AdminLoginControllerTest           : No active profile set, falling back to 1 default profile: "default"
-2024-08-30T08:10:37.581+09:00  INFO 13792 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-30T08:10:37.694+09:00  INFO 13792 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 94 ms. Found 2 JPA repository interfaces.
-2024-08-30T08:10:40.718+09:00  INFO 13792 --- [EC] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-30T08:10:40.996+09:00  INFO 13792 --- [EC] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-08-30T08:10:41.164+09:00  INFO 13792 --- [EC] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-08-30T08:10:41.770+09:00  INFO 13792 --- [EC] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-30T08:10:41.893+09:00  INFO 13792 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-08-30T08:10:42.393+09:00  INFO 13792 --- [EC] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7188bd49
-2024-08-30T08:10:42.400+09:00  INFO 13792 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-08-30T08:10:42.508+09:00  WARN 13792 --- [EC] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-08-30T08:10:44.487+09:00  INFO 13792 --- [EC] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-30T08:10:44.548+09:00  INFO 13792 --- [EC] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-30T08:10:45.421+09:00  WARN 13792 --- [EC] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-30T08:10:46.227+09:00  INFO 13792 --- [EC] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-08-30T08:10:46.228+09:00  INFO 13792 --- [EC] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-08-30T08:10:46.230+09:00  INFO 13792 --- [EC] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-2024-08-30T08:10:46.264+09:00  INFO 13792 --- [EC] [main] e.c.c.AdminLoginControllerTest           : Started AdminLoginControllerTest in 10.729 seconds (process running for 13.397)
-2024-08-30T08:10:47.194+09:00  INFO 13792 --- [EC] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-30T08:10:47.196+09:00  INFO 13792 --- [EC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-08-30T08:10:47.200+09:00  INFO 13792 --- [EC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-08-30T08:16:34.692+09:00  INFO 20372 --- [EC] [main] e.c.c.AdminLoginControllerTest           : Starting AdminLoginControllerTest using Java 17.0.10 with PID 20372 (started by masak in C:\work\Github\202407\202407Class\STS\EC\EC)
-2024-08-30T08:16:34.694+09:00  INFO 20372 --- [EC] [main] e.c.c.AdminLoginControllerTest           : No active profile set, falling back to 1 default profile: "default"
-2024-08-30T08:16:35.913+09:00  INFO 20372 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-30T08:16:36.015+09:00  INFO 20372 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87 ms. Found 2 JPA repository interfaces.
-2024-08-30T08:16:39.224+09:00  INFO 20372 --- [EC] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-30T08:16:39.506+09:00  INFO 20372 --- [EC] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-08-30T08:16:39.692+09:00  INFO 20372 --- [EC] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-08-30T08:16:40.313+09:00  INFO 20372 --- [EC] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-30T08:16:40.441+09:00  INFO 20372 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-08-30T08:16:40.924+09:00  INFO 20372 --- [EC] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@16c30e11
-2024-08-30T08:16:40.933+09:00  INFO 20372 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-08-30T08:16:41.039+09:00  WARN 20372 --- [EC] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-08-30T08:16:43.286+09:00  INFO 20372 --- [EC] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-30T08:16:43.350+09:00  INFO 20372 --- [EC] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-30T08:16:44.181+09:00  WARN 20372 --- [EC] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-30T08:16:44.925+09:00  INFO 20372 --- [EC] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-08-30T08:16:44.926+09:00  INFO 20372 --- [EC] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-08-30T08:16:44.928+09:00  INFO 20372 --- [EC] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-2024-08-30T08:16:44.961+09:00  INFO 20372 --- [EC] [main] e.c.c.AdminLoginControllerTest           : Started AdminLoginControllerTest in 10.981 seconds (process running for 13.849)
-2024-08-30T08:16:46.106+09:00  INFO 20372 --- [EC] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-30T08:16:46.110+09:00  INFO 20372 --- [EC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-08-30T08:16:46.114+09:00  INFO 20372 --- [EC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-08-30T08:17:37.510+09:00  INFO 31492 --- [EC] [main] e.c.c.AdminLoginControllerTest           : Starting AdminLoginControllerTest using Java 17.0.10 with PID 31492 (started by masak in C:\work\Github\202407\202407Class\STS\EC\EC)
-2024-08-30T08:17:37.513+09:00  INFO 31492 --- [EC] [main] e.c.c.AdminLoginControllerTest           : No active profile set, falling back to 1 default profile: "default"
-2024-08-30T08:17:38.860+09:00  INFO 31492 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-30T08:17:38.960+09:00  INFO 31492 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82 ms. Found 2 JPA repository interfaces.
-2024-08-30T08:17:42.107+09:00  INFO 31492 --- [EC] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-30T08:17:42.395+09:00  INFO 31492 --- [EC] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-08-30T08:17:42.568+09:00  INFO 31492 --- [EC] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-08-30T08:17:43.154+09:00  INFO 31492 --- [EC] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-30T08:17:43.284+09:00  INFO 31492 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-08-30T08:17:43.803+09:00  INFO 31492 --- [EC] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@11c929a2
-2024-08-30T08:17:43.810+09:00  INFO 31492 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-08-30T08:17:43.894+09:00  WARN 31492 --- [EC] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-08-30T08:17:45.911+09:00  INFO 31492 --- [EC] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-30T08:17:45.985+09:00  INFO 31492 --- [EC] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-30T08:17:46.886+09:00  WARN 31492 --- [EC] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-30T08:17:47.616+09:00  INFO 31492 --- [EC] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-08-30T08:17:47.617+09:00  INFO 31492 --- [EC] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-08-30T08:17:47.618+09:00  INFO 31492 --- [EC] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2024-08-30T08:17:47.650+09:00  INFO 31492 --- [EC] [main] e.c.c.AdminLoginControllerTest           : Started AdminLoginControllerTest in 10.888 seconds (process running for 13.61)
-2024-08-30T08:17:48.496+09:00  INFO 31492 --- [EC] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-30T08:17:48.499+09:00  INFO 31492 --- [EC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-08-30T08:17:48.503+09:00  INFO 31492 --- [EC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-08-30T08:23:50.084+09:00  INFO 16828 --- [EC] [main] e.c.c.AdminLoginControllerTest           : Starting AdminLoginControllerTest using Java 17.0.10 with PID 16828 (started by masak in C:\work\Github\202407\202407Class\STS\EC\EC)
-2024-08-30T08:23:50.087+09:00  INFO 16828 --- [EC] [main] e.c.c.AdminLoginControllerTest           : No active profile set, falling back to 1 default profile: "default"
-2024-08-30T08:23:51.413+09:00  INFO 16828 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-30T08:23:51.519+09:00  INFO 16828 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85 ms. Found 2 JPA repository interfaces.
-2024-08-30T08:23:55.133+09:00  INFO 16828 --- [EC] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-30T08:23:55.465+09:00  INFO 16828 --- [EC] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-08-30T08:23:55.658+09:00  INFO 16828 --- [EC] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-08-30T08:23:56.358+09:00  INFO 16828 --- [EC] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-30T08:23:56.489+09:00  INFO 16828 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-08-30T08:23:57.006+09:00  INFO 16828 --- [EC] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@396ea7ab
-2024-08-30T08:23:57.016+09:00  INFO 16828 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-08-30T08:23:57.127+09:00  WARN 16828 --- [EC] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-08-30T08:23:59.561+09:00  INFO 16828 --- [EC] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-30T08:23:59.641+09:00  INFO 16828 --- [EC] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-30T08:24:00.768+09:00  WARN 16828 --- [EC] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-30T08:24:01.586+09:00  INFO 16828 --- [EC] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-08-30T08:24:01.587+09:00  INFO 16828 --- [EC] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-08-30T08:24:01.588+09:00  INFO 16828 --- [EC] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2024-08-30T08:24:01.624+09:00  INFO 16828 --- [EC] [main] e.c.c.AdminLoginControllerTest           : Started AdminLoginControllerTest in 12.229 seconds (process running for 14.952)
-2024-08-30T08:24:02.640+09:00  INFO 16828 --- [EC] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-30T08:24:02.643+09:00  INFO 16828 --- [EC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-08-30T08:24:02.648+09:00  INFO 16828 --- [EC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-08-30T08:28:55.469+09:00  INFO 24808 --- [EC] [main] e.c.c.AdminRegisterControllerTest        : Starting AdminRegisterControllerTest using Java 17.0.10 with PID 24808 (started by masak in C:\work\Github\202407\202407Class\STS\EC\EC)
-2024-08-30T08:28:55.472+09:00  INFO 24808 --- [EC] [main] e.c.c.AdminRegisterControllerTest        : No active profile set, falling back to 1 default profile: "default"
-2024-08-30T08:28:56.835+09:00  INFO 24808 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-30T08:28:56.964+09:00  INFO 24808 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 109 ms. Found 2 JPA repository interfaces.
-2024-08-30T08:29:00.077+09:00  INFO 24808 --- [EC] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-30T08:29:00.367+09:00  INFO 24808 --- [EC] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-08-30T08:29:00.563+09:00  INFO 24808 --- [EC] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-08-30T08:29:01.168+09:00  INFO 24808 --- [EC] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-30T08:29:01.293+09:00  INFO 24808 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-08-30T08:29:01.922+09:00  INFO 24808 --- [EC] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6c00f72a
-2024-08-30T08:29:01.931+09:00  INFO 24808 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-08-30T08:29:02.038+09:00  WARN 24808 --- [EC] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-08-30T08:29:04.209+09:00  INFO 24808 --- [EC] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-30T08:29:04.271+09:00  INFO 24808 --- [EC] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-30T08:29:05.137+09:00  WARN 24808 --- [EC] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-30T08:29:05.855+09:00  INFO 24808 --- [EC] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-08-30T08:29:05.856+09:00  INFO 24808 --- [EC] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-08-30T08:29:05.858+09:00  INFO 24808 --- [EC] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2024-08-30T08:29:05.887+09:00  INFO 24808 --- [EC] [main] e.c.c.AdminRegisterControllerTest        : Started AdminRegisterControllerTest in 11.17 seconds (process running for 13.905)
-2024-08-30T08:29:06.048+09:00  WARN 24808 --- [EC] [main] e.c.controllers.AdminRegisterController  : 登録画面を表示しました
-2024-08-30T08:29:07.043+09:00  INFO 24808 --- [EC] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-30T08:29:07.047+09:00  INFO 24808 --- [EC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-08-30T08:29:07.051+09:00  INFO 24808 --- [EC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-08-30T08:29:32.076+09:00  INFO 22212 --- [EC] [main] e.c.c.AdminRegisterControllerTest        : Starting AdminRegisterControllerTest using Java 17.0.10 with PID 22212 (started by masak in C:\work\Github\202407\202407Class\STS\EC\EC)
-2024-08-30T08:29:32.080+09:00  INFO 22212 --- [EC] [main] e.c.c.AdminRegisterControllerTest        : No active profile set, falling back to 1 default profile: "default"
-2024-08-30T08:29:33.377+09:00  INFO 22212 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-30T08:29:33.517+09:00  INFO 22212 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 116 ms. Found 2 JPA repository interfaces.
-2024-08-30T08:29:37.077+09:00  INFO 22212 --- [EC] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-30T08:29:37.399+09:00  INFO 22212 --- [EC] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-08-30T08:29:37.596+09:00  INFO 22212 --- [EC] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-08-30T08:29:38.326+09:00  INFO 22212 --- [EC] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-30T08:29:38.476+09:00  INFO 22212 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-08-30T08:29:39.110+09:00  INFO 22212 --- [EC] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7df7d5cc
-2024-08-30T08:29:39.123+09:00  INFO 22212 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-08-30T08:29:39.230+09:00  WARN 22212 --- [EC] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-08-30T08:29:41.894+09:00  INFO 22212 --- [EC] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-30T08:29:41.979+09:00  INFO 22212 --- [EC] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-30T08:29:43.086+09:00  WARN 22212 --- [EC] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-30T08:29:43.914+09:00  INFO 22212 --- [EC] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-08-30T08:29:43.914+09:00  INFO 22212 --- [EC] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-08-30T08:29:43.916+09:00  INFO 22212 --- [EC] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-2024-08-30T08:29:43.952+09:00  INFO 22212 --- [EC] [main] e.c.c.AdminRegisterControllerTest        : Started AdminRegisterControllerTest in 12.617 seconds (process running for 15.489)
-2024-08-30T08:29:44.196+09:00  WARN 22212 --- [EC] [main] e.c.controllers.AdminRegisterController  : 登録画面を表示しました
-2024-08-30T08:29:45.098+09:00  INFO 22212 --- [EC] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-30T08:29:45.102+09:00  INFO 22212 --- [EC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-08-30T08:29:45.107+09:00  INFO 22212 --- [EC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-08-30T13:42:37.845+09:00  INFO 30900 --- [EC] [main] ec.com.services.AdminServiceTest         : Starting AdminServiceTest using Java 17.0.10 with PID 30900 (started by masak in C:\work\Github\202407\202407Class\STS\EC\EC)
-2024-08-30T13:42:37.851+09:00  INFO 30900 --- [EC] [main] ec.com.services.AdminServiceTest         : No active profile set, falling back to 1 default profile: "default"
-2024-08-30T13:42:39.740+09:00  INFO 30900 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-30T13:42:39.878+09:00  INFO 30900 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 116 ms. Found 2 JPA repository interfaces.
-2024-08-30T13:42:44.538+09:00  INFO 30900 --- [EC] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-30T13:42:44.983+09:00  INFO 30900 --- [EC] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-08-30T13:42:45.238+09:00  INFO 30900 --- [EC] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-08-30T13:42:45.974+09:00  INFO 30900 --- [EC] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-30T13:42:46.118+09:00  INFO 30900 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-08-30T13:42:46.685+09:00  INFO 30900 --- [EC] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@35950e2
-2024-08-30T13:42:46.705+09:00  INFO 30900 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-08-30T13:42:46.890+09:00  WARN 30900 --- [EC] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-08-30T13:42:49.664+09:00  INFO 30900 --- [EC] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-30T13:42:49.773+09:00  INFO 30900 --- [EC] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-30T13:42:50.904+09:00  WARN 30900 --- [EC] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-30T13:42:51.831+09:00  INFO 30900 --- [EC] [main] ec.com.services.AdminServiceTest         : Started AdminServiceTest in 14.822 seconds (process running for 18.29)
-2024-08-30T13:42:52.477+09:00  INFO 30900 --- [EC] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-30T13:42:52.482+09:00  INFO 30900 --- [EC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-08-30T13:42:52.492+09:00  INFO 30900 --- [EC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-08-30T13:43:53.913+09:00  INFO 15964 --- [EC] [main] ec.com.services.AdminServiceTest         : Starting AdminServiceTest using Java 17.0.10 with PID 15964 (started by masak in C:\work\Github\202407\202407Class\STS\EC\EC)
-2024-08-30T13:43:53.918+09:00  INFO 15964 --- [EC] [main] ec.com.services.AdminServiceTest         : No active profile set, falling back to 1 default profile: "default"
-2024-08-30T13:43:55.841+09:00  INFO 15964 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-30T13:43:55.972+09:00  INFO 15964 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 111 ms. Found 2 JPA repository interfaces.
-2024-08-30T13:44:00.684+09:00  INFO 15964 --- [EC] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-30T13:44:01.094+09:00  INFO 15964 --- [EC] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-08-30T13:44:01.363+09:00  INFO 15964 --- [EC] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-08-30T13:44:02.106+09:00  INFO 15964 --- [EC] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-30T13:44:02.241+09:00  INFO 15964 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-08-30T13:44:02.863+09:00  INFO 15964 --- [EC] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4de6c6b9
-2024-08-30T13:44:02.872+09:00  INFO 15964 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-08-30T13:44:03.012+09:00  WARN 15964 --- [EC] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-08-30T13:44:05.630+09:00  INFO 15964 --- [EC] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-30T13:44:05.701+09:00  INFO 15964 --- [EC] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-30T13:44:06.724+09:00  WARN 15964 --- [EC] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-30T13:44:07.592+09:00  INFO 15964 --- [EC] [main] ec.com.services.AdminServiceTest         : Started AdminServiceTest in 14.507 seconds (process running for 18.001)
-2024-08-30T13:44:08.154+09:00  INFO 15964 --- [EC] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-30T13:44:08.161+09:00  INFO 15964 --- [EC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-08-30T13:44:08.169+09:00  INFO 15964 --- [EC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-08-30T13:45:24.174+09:00  INFO 32188 --- [EC] [main] ec.com.services.AdminServiceTest         : Starting AdminServiceTest using Java 17.0.10 with PID 32188 (started by masak in C:\work\Github\202407\202407Class\STS\EC\EC)
-2024-08-30T13:45:24.179+09:00  INFO 32188 --- [EC] [main] ec.com.services.AdminServiceTest         : No active profile set, falling back to 1 default profile: "default"
-2024-08-30T13:45:26.112+09:00  INFO 32188 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-30T13:45:26.264+09:00  INFO 32188 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 134 ms. Found 2 JPA repository interfaces.
-2024-08-30T13:45:30.846+09:00  INFO 32188 --- [EC] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-30T13:45:31.216+09:00  INFO 32188 --- [EC] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-08-30T13:45:31.432+09:00  INFO 32188 --- [EC] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-08-30T13:45:32.135+09:00  INFO 32188 --- [EC] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-30T13:45:32.273+09:00  INFO 32188 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-08-30T13:45:32.890+09:00  INFO 32188 --- [EC] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@35950e2
-2024-08-30T13:45:32.896+09:00  INFO 32188 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-08-30T13:45:33.009+09:00  WARN 32188 --- [EC] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-08-30T13:45:35.428+09:00  INFO 32188 --- [EC] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-30T13:45:35.488+09:00  INFO 32188 --- [EC] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-30T13:45:36.584+09:00  WARN 32188 --- [EC] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-30T13:45:37.453+09:00  INFO 32188 --- [EC] [main] ec.com.services.AdminServiceTest         : Started AdminServiceTest in 14.219 seconds (process running for 17.703)
-2024-08-30T13:45:38.007+09:00  INFO 32188 --- [EC] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-30T13:45:38.014+09:00  INFO 32188 --- [EC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-08-30T13:45:38.020+09:00  INFO 32188 --- [EC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-08-30T13:56:04.019+09:00  INFO 17376 --- [EC] [main] e.c.c.AdminLoginControllerTest           : Starting AdminLoginControllerTest using Java 17.0.10 with PID 17376 (started by masak in C:\work\Github\202407\202407Class\STS\EC\EC)
-2024-08-30T13:56:04.022+09:00  INFO 17376 --- [EC] [main] e.c.c.AdminLoginControllerTest           : No active profile set, falling back to 1 default profile: "default"
-2024-08-30T13:56:05.347+09:00  INFO 17376 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-30T13:56:05.464+09:00  INFO 17376 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98 ms. Found 2 JPA repository interfaces.
-2024-08-30T13:56:09.173+09:00  INFO 17376 --- [EC] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-30T13:56:09.567+09:00  INFO 17376 --- [EC] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-08-30T13:56:09.811+09:00  INFO 17376 --- [EC] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-08-30T13:56:10.524+09:00  INFO 17376 --- [EC] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-30T13:56:10.687+09:00  INFO 17376 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-08-30T13:56:11.218+09:00  INFO 17376 --- [EC] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@72f6cd2e
-2024-08-30T13:56:11.225+09:00  INFO 17376 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-08-30T13:56:11.331+09:00  WARN 17376 --- [EC] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-08-30T13:56:13.732+09:00  INFO 17376 --- [EC] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-30T13:56:13.815+09:00  INFO 17376 --- [EC] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-30T13:56:14.920+09:00  WARN 17376 --- [EC] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-30T13:56:15.648+09:00  INFO 17376 --- [EC] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-08-30T13:56:15.648+09:00  INFO 17376 --- [EC] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-08-30T13:56:15.650+09:00  INFO 17376 --- [EC] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2024-08-30T13:56:15.681+09:00  INFO 17376 --- [EC] [main] e.c.c.AdminLoginControllerTest           : Started AdminLoginControllerTest in 12.392 seconds (process running for 15.592)
-2024-08-30T13:56:16.702+09:00  INFO 17376 --- [EC] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-30T13:56:16.705+09:00  INFO 17376 --- [EC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-08-30T13:56:16.709+09:00  INFO 17376 --- [EC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-08-30T13:57:10.201+09:00  INFO 6840 --- [EC] [main] e.c.c.AdminLoginControllerTest           : Starting AdminLoginControllerTest using Java 17.0.10 with PID 6840 (started by masak in C:\work\Github\202407\202407Class\STS\EC\EC)
-2024-08-30T13:57:10.205+09:00  INFO 6840 --- [EC] [main] e.c.c.AdminLoginControllerTest           : No active profile set, falling back to 1 default profile: "default"
-2024-08-30T13:57:11.548+09:00  INFO 6840 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-30T13:57:11.667+09:00  INFO 6840 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98 ms. Found 2 JPA repository interfaces.
-2024-08-30T13:57:14.154+09:00  INFO 6840 --- [EC] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-30T13:57:14.376+09:00  INFO 6840 --- [EC] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-08-30T13:57:14.512+09:00  INFO 6840 --- [EC] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-08-30T13:57:14.928+09:00  INFO 6840 --- [EC] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-30T13:57:15.047+09:00  INFO 6840 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-08-30T13:57:15.430+09:00  INFO 6840 --- [EC] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@484302ee
-2024-08-30T13:57:15.436+09:00  INFO 6840 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-08-30T13:57:15.543+09:00  WARN 6840 --- [EC] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-08-30T13:57:17.074+09:00  INFO 6840 --- [EC] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-30T13:57:17.130+09:00  INFO 6840 --- [EC] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-30T13:57:18.413+09:00  WARN 6840 --- [EC] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-30T13:57:19.574+09:00  INFO 6840 --- [EC] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-08-30T13:57:19.575+09:00  INFO 6840 --- [EC] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-08-30T13:57:19.579+09:00  INFO 6840 --- [EC] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
-2024-08-30T13:57:19.636+09:00  INFO 6840 --- [EC] [main] e.c.c.AdminLoginControllerTest           : Started AdminLoginControllerTest in 10.116 seconds (process running for 12.854)
-2024-08-30T13:59:05.633+09:00  INFO 20772 --- [EC] [main] e.c.c.AdminLoginControllerTest           : Starting AdminLoginControllerTest using Java 17.0.10 with PID 20772 (started by masak in C:\work\Github\202407\202407Class\STS\EC\EC)
-2024-08-30T13:59:05.636+09:00  INFO 20772 --- [EC] [main] e.c.c.AdminLoginControllerTest           : No active profile set, falling back to 1 default profile: "default"
-2024-08-30T13:59:07.036+09:00  INFO 20772 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-30T13:59:07.186+09:00  INFO 20772 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 130 ms. Found 2 JPA repository interfaces.
-2024-08-30T13:59:09.935+09:00  INFO 20772 --- [EC] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-30T13:59:10.171+09:00  INFO 20772 --- [EC] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-08-30T13:59:10.329+09:00  INFO 20772 --- [EC] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-08-30T13:59:10.771+09:00  INFO 20772 --- [EC] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-30T13:59:10.859+09:00  INFO 20772 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-08-30T13:59:11.217+09:00  INFO 20772 --- [EC] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@484302ee
-2024-08-30T13:59:11.225+09:00  INFO 20772 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-08-30T13:59:11.336+09:00  WARN 20772 --- [EC] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-08-30T13:59:12.947+09:00  INFO 20772 --- [EC] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-30T13:59:13.005+09:00  INFO 20772 --- [EC] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-30T13:59:14.358+09:00  WARN 20772 --- [EC] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-30T13:59:15.535+09:00  INFO 20772 --- [EC] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-08-30T13:59:15.535+09:00  INFO 20772 --- [EC] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-08-30T13:59:15.538+09:00  INFO 20772 --- [EC] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2024-08-30T13:59:15.585+09:00  INFO 20772 --- [EC] [main] e.c.c.AdminLoginControllerTest           : Started AdminLoginControllerTest in 10.553 seconds (process running for 13.106)
-2024-08-30T13:59:37.323+09:00  INFO 20772 --- [EC] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-30T13:59:37.325+09:00  INFO 20772 --- [EC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-08-30T13:59:37.331+09:00  INFO 20772 --- [EC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-30T10:51:59.495+09:00  INFO 7780 --- [EC] [main] ec.com.models.dao.AdminDaoTest           : Starting AdminDaoTest using Java 17.0.10 with PID 7780 (started by masak in C:\work\Github\202407\202407Class\STS\EC\EC)
+2024-10-30T10:51:59.503+09:00  INFO 7780 --- [EC] [main] ec.com.models.dao.AdminDaoTest           : No active profile set, falling back to 1 default profile: "default"
+2024-10-30T10:52:00.659+09:00  INFO 7780 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-30T10:52:00.761+09:00  INFO 7780 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87 ms. Found 2 JPA repository interfaces.
+2024-10-30T10:52:01.489+09:00  INFO 7780 --- [EC] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-30T10:52:01.604+09:00  INFO 7780 --- [EC] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-10-30T10:52:01.666+09:00  INFO 7780 --- [EC] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-30T10:52:02.289+09:00  INFO 7780 --- [EC] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-30T10:52:02.335+09:00  INFO 7780 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-30T10:52:02.719+09:00  INFO 7780 --- [EC] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4522d793
+2024-10-30T10:52:02.723+09:00  INFO 7780 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-30T10:52:02.780+09:00  WARN 7780 --- [EC] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-30T10:52:04.170+09:00  INFO 7780 --- [EC] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-30T10:52:04.225+09:00  INFO 7780 --- [EC] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-30T10:52:05.017+09:00  WARN 7780 --- [EC] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-30T10:52:05.868+09:00  INFO 7780 --- [EC] [main] ec.com.models.dao.AdminDaoTest           : Started AdminDaoTest in 6.895 seconds (process running for 8.598)
+2024-10-30T10:52:05.965+09:00  WARN 7780 --- [EC] [main] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] for test method [public void ec.com.models.dao.AdminDaoTest.test()] and test instance [ec.com.models.dao.AdminDaoTest@58701e8c]
+
+org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of class path resource [ec/com/sql/insert.sql]: INSERT INTO public.admin( admin_id, admin_email, admin_name, password, admin_password, admin_confirm_password) VALUES (1, 202407@test, KM, , 1234, 12340)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282) ~[spring-jdbc-6.1.6.jar:6.1.6]
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-6.1.6.jar:6.1.6]
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54) ~[spring-jdbc-6.1.6.jar:6.1.6]
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.execute(ResourceDatabasePopulator.java:269) ~[spring-jdbc-6.1.6.jar:6.1.6]
+	at org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener.lambda$executeSqlScripts$9(SqlScriptsTestExecutionListener.java:361) ~[spring-test-6.1.6.jar:6.1.6]
+	at org.springframework.transaction.support.TransactionOperations.lambda$executeWithoutResult$0(TransactionOperations.java:68) ~[spring-tx-6.1.6.jar:6.1.6]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) ~[spring-tx-6.1.6.jar:6.1.6]
+	at org.springframework.transaction.support.TransactionOperations.executeWithoutResult(TransactionOperations.java:67) ~[spring-tx-6.1.6.jar:6.1.6]
+	at org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener.executeSqlScripts(SqlScriptsTestExecutionListener.java:361) ~[spring-test-6.1.6.jar:6.1.6]
+	at org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener.lambda$executeSqlScripts$4(SqlScriptsTestExecutionListener.java:274) ~[spring-test-6.1.6.jar:6.1.6]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener.executeSqlScripts(SqlScriptsTestExecutionListener.java:274) ~[spring-test-6.1.6.jar:6.1.6]
+	at org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener.executeSqlScripts(SqlScriptsTestExecutionListener.java:221) ~[spring-test-6.1.6.jar:6.1.6]
+	at org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener.beforeTestMethod(SqlScriptsTestExecutionListener.java:164) ~[spring-test-6.1.6.jar:6.1.6]
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:320) ~[spring-test-6.1.6.jar:6.1.6]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.beforeEach(SpringExtension.java:240) ~[spring-test-6.1.6.jar:6.1.6]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeBeforeEachCallbacks$2(TestMethodTestDescriptor.java:167) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeBeforeMethodsOrCallbacksUntilExceptionOccurs$6(TestMethodTestDescriptor.java:203) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeBeforeMethodsOrCallbacksUntilExceptionOccurs(TestMethodTestDescriptor.java:203) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeBeforeEachCallbacks(TestMethodTestDescriptor.java:166) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:133) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:94) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:52) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:70) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:100) ~[.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40) ~[.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529) ~[.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:757) ~[.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452) ~[.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210) ~[.cp/:na]
+Caused by: org.postgresql.util.PSQLException: ERROR: ","またはその近辺で構文エラー
+  位置: 140
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713) ~[postgresql-42.6.2.jar:42.6.2]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401) ~[postgresql-42.6.2.jar:42.6.2]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368) ~[postgresql-42.6.2.jar:42.6.2]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:498) ~[postgresql-42.6.2.jar:42.6.2]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:415) ~[postgresql-42.6.2.jar:42.6.2]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:335) ~[postgresql-42.6.2.jar:42.6.2]
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:321) ~[postgresql-42.6.2.jar:42.6.2]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:297) ~[postgresql-42.6.2.jar:42.6.2]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:292) ~[postgresql-42.6.2.jar:42.6.2]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.0.1.jar:na]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-6.1.6.jar:6.1.6]
+	... 69 common frames omitted
+
+2024-10-30T10:52:06.749+09:00  INFO 7780 --- [EC] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-30T10:52:06.751+09:00  INFO 7780 --- [EC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-30T10:52:06.755+09:00  INFO 7780 --- [EC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-30T10:54:10.617+09:00  INFO 21440 --- [EC] [main] ec.com.models.dao.AdminDaoTest           : Starting AdminDaoTest using Java 17.0.10 with PID 21440 (started by masak in C:\work\Github\202407\202407Class\STS\EC\EC)
+2024-10-30T10:54:10.619+09:00  INFO 21440 --- [EC] [main] ec.com.models.dao.AdminDaoTest           : No active profile set, falling back to 1 default profile: "default"
+2024-10-30T10:54:11.499+09:00  INFO 21440 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-30T10:54:11.591+09:00  INFO 21440 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79 ms. Found 2 JPA repository interfaces.
+2024-10-30T10:54:12.249+09:00  INFO 21440 --- [EC] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-30T10:54:12.348+09:00  INFO 21440 --- [EC] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-10-30T10:54:12.407+09:00  INFO 21440 --- [EC] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-30T10:54:12.750+09:00  INFO 21440 --- [EC] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-30T10:54:12.791+09:00  INFO 21440 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-30T10:54:13.052+09:00  INFO 21440 --- [EC] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@47f2c722
+2024-10-30T10:54:13.055+09:00  INFO 21440 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-30T10:54:13.102+09:00  WARN 21440 --- [EC] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-30T10:54:14.126+09:00  INFO 21440 --- [EC] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-30T10:54:14.182+09:00  INFO 21440 --- [EC] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-30T10:54:14.880+09:00  WARN 21440 --- [EC] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-30T10:54:15.624+09:00  INFO 21440 --- [EC] [main] ec.com.models.dao.AdminDaoTest           : Started AdminDaoTest in 5.426 seconds (process running for 6.713)
+2024-10-30T10:54:16.522+09:00 DEBUG 21440 --- [EC] [main] org.hibernate.SQL                        : select a1_0.admin_id,a1_0.admin_email,a1_0.admin_name,a1_0.password from admin a1_0 where a1_0.admin_email=?
+2024-10-30T10:54:16.569+09:00  INFO 21440 --- [EC] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-30T10:54:16.573+09:00  INFO 21440 --- [EC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-30T10:54:16.577+09:00  INFO 21440 --- [EC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-30T10:54:39.710+09:00  INFO 3448 --- [EC] [main] ec.com.models.dao.AdminDaoTest           : Starting AdminDaoTest using Java 17.0.10 with PID 3448 (started by masak in C:\work\Github\202407\202407Class\STS\EC\EC)
+2024-10-30T10:54:39.713+09:00  INFO 3448 --- [EC] [main] ec.com.models.dao.AdminDaoTest           : No active profile set, falling back to 1 default profile: "default"
+2024-10-30T10:54:40.849+09:00  INFO 3448 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-30T10:54:40.961+09:00  INFO 3448 --- [EC] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 2 JPA repository interfaces.
+2024-10-30T10:54:41.669+09:00  INFO 3448 --- [EC] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-30T10:54:41.767+09:00  INFO 3448 --- [EC] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-10-30T10:54:41.818+09:00  INFO 3448 --- [EC] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-30T10:54:42.215+09:00  INFO 3448 --- [EC] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-30T10:54:42.275+09:00  INFO 3448 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-30T10:54:42.529+09:00  INFO 3448 --- [EC] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5835e24a
+2024-10-30T10:54:42.536+09:00  INFO 3448 --- [EC] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-30T10:54:42.586+09:00  WARN 3448 --- [EC] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-30T10:54:43.870+09:00  INFO 3448 --- [EC] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-30T10:54:43.918+09:00  INFO 3448 --- [EC] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-30T10:54:44.661+09:00  WARN 3448 --- [EC] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-30T10:54:45.524+09:00  INFO 3448 --- [EC] [main] ec.com.models.dao.AdminDaoTest           : Started AdminDaoTest in 6.308 seconds (process running for 8.342)
+2024-10-30T10:54:46.503+09:00 DEBUG 3448 --- [EC] [main] org.hibernate.SQL                        : select a1_0.admin_id,a1_0.admin_email,a1_0.admin_name,a1_0.password from admin a1_0 where a1_0.admin_email=?
+2024-10-30T10:55:02.295+09:00  INFO 3448 --- [EC] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-30T10:55:02.297+09:00  INFO 3448 --- [EC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-30T10:55:02.302+09:00  INFO 3448 --- [EC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

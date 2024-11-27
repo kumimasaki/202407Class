@@ -22,7 +22,6 @@ public class Ex2 {
 		// コンソールに出力「私の名前は name です。年齢は age です。」
 		System.out.println("私の名前は" + name1 + "です。年齢は" + age + "です。");
 		
-		
 	}
 
 }
