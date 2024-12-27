@@ -51,8 +51,15 @@
 		</section>
 		<section class="blog-list-section">
 			<h2>Blog List</h2>
-			<h2><a th:href="@{/user/blog/list/find}" style="color: black;">検索</a></h2>
-			<div class="blog-list-flex">
+			<div id="search-content" style="margin-bottom: 20px; text-align: center;">
+				<form th:action="@{/user/blog/list/find}" method="post">
+					<label for="search">記事検索</label>
+					<input type="text" id="search" name="keyword" style="width: 20%;">
+					<button class="search-button" style="color: black;">検索</button>
+				</form>
+			</div>
+			<!--<h2><a th:href="@{/user/blog/list/find}" style="color: black;">検索</a></h2>-->
+			<div th:if="${blogList != null}"　class="blog-list-flex">
 				<article class="blog-topic-article" th:each="blog:${blogList}">
 					<a th:href="@{/user/blog/edit/{blogId}(blogId=${blog.blogId})}" class="blog-colum">
 						<div class="blog-colum-category">
@@ -63,8 +70,14 @@
 							<p th:text="${#temporals.format(blog.registerDate, 'yyyy/MM/dd')}"></p>
 							<p th:text=" ${blog.blogTitle}"></p>
 						</div>
+						<div th:if="${blog.viewCount != null}">
+							<p th:text="${blog.viewCount}"></p>
+						</div>
 					</a>
 				</article>
+			</div>
+			<div class="blog-list-flex" style="text-align: center;">
+				<a th:href="@{/user/blog/list}">全件表示はこちらをクリック</a>
 			</div>
 		</section>
 	</main>

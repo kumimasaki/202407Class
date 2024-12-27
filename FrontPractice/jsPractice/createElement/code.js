@@ -23,7 +23,7 @@ removeLink.parentNode.remove();
 // 要素を取得
 let btnEvent = document.getElementById("button1");
 // 書き方１
-/**document.getElementById("button").onclick = function() {
+/**対象の要素.onclick = function() {
   // ここに#buttonをクリックしたら発生させる処理を記述する
 }; */
 // btnEvent.onclick = function(){

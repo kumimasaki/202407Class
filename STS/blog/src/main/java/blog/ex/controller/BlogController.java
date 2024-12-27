@@ -88,27 +88,31 @@ public class BlogController {
 		 * このビューは、userNameとblogListを表示するためのHTMLテンプレート**/
 		model.addAttribute("userName", userName);
 		model.addAttribute("blogList", blogList);
+//		model.addAttribute("result", blogList);
 		return "blog-list.html";
 	}
 
-	@GetMapping("/list/find")
-	public String getBlogListForFind(Model model) {
-		UserEntity userList = (UserEntity) session.getAttribute("user");
-		String userName = userList.getUserName();
-		model.addAttribute("userName", userName);
-		return "blog-list-find.html";
-	}
-	
-	@PostMapping("/list/find/result")
-	public String getBlogListForFind(@RequestParam String findcontents, Model model) {
+	@PostMapping("/list/find")
+	public String getBlogListForFind(@RequestParam String keyword, Model model) {
 		UserEntity userList = (UserEntity) session.getAttribute("user");
 		Long userId = userList.getUserId();
 		String userName = userList.getUserName();
-		List<BlogEntity>blogList = blogService.findBlogPost(userId, findcontents);
+		List<BlogEntity>blogList = blogService.findBlogPost(userId, keyword);
 		model.addAttribute("userName", userName);
 		model.addAttribute("blogList", blogList);
-		return "blog-list-find.html";
+		return "blog-list.html";
 	}
+	
+//	@PostMapping("/list/find/result")
+//	public String getBlogListForFind(@RequestParam String findcontents, Model model) {
+//		UserEntity userList = (UserEntity) session.getAttribute("user");
+//		Long userId = userList.getUserId();
+//		String userName = userList.getUserName();
+//		List<BlogEntity>blogList = blogService.findBlogPost(userId, findcontents);
+//		model.addAttribute("userName", userName);
+//		model.addAttribute("blogList", blogList);
+//		return "blog-list-find.html";
+//	}
 	
 	@GetMapping("/register")
 	public String getBlogRegisterPage(Model model) {
@@ -205,9 +209,11 @@ public class BlogController {
 		/**blogService.getBlogPost(blogId)を使用して、
 		 * 指定されたblogIdに対応するブログを取得し、blogListに代入します。**/
 		BlogEntity blogList = blogService.getBlogPost(blogId);
+//		// カウント機能
+		blogService.updateViewCount(userList.getUserId(), blogId, blogList.getViewCount());
 		/**blogListがnullであれば、"/user/blog/list"にリダイレクトします。**/
 		if(blogList == null) {
-			return "redirecr:/user/blog/list";
+			return "redirect:/user/blog/list";
 		}else {
 			/**blogListと"記事編集"というメッセージをModelオブジェクトに追加し、"blog-edit.html"に遷移します。**/
 			model.addAttribute("blogList", blogList);
@@ -240,7 +246,6 @@ public class BlogController {
 		 * UserEntityのインスタンスが取得できた場合、そのuserIdを取得しています。**/
 		UserEntity userList = (UserEntity) session.getAttribute("user");
 		Long userId = userList.getUserId();
-
 		/**blogService.editBlogPost()を使用して、指定されたblogIdに対応するブログを更新します。
 		 * 更新が成功した場合は、"blog-edit-fix.html"に遷移し、
 		 * 更新に失敗した場合は、"blog-edit.html"に"更新に失敗しました"というメッセージを追加して遷移します。**/

@@ -67,7 +67,7 @@ public class BlogService {
 		/**
 		 * もし、存在しなければ、新しいブログ記事を作成して blogDao.save() によってデータベースに保存します**/
 		if(blogList == null) {
-			blogDao.save(new BlogEntity(blogTitle,registerDate,fileName,blogDetail,category,userId));
+			blogDao.save(new BlogEntity(blogTitle,registerDate,fileName,blogDetail,category,userId, 1L));
 			/**新しいブログ記事が作成され、データベースに保存された場合は、true を返します。**/
 			return true;
 		}else {
@@ -99,6 +99,20 @@ public class BlogService {
 			blogList.setRegisterDate(registerDate);
 			blogList.setCategory(category);
 			blogList.setBlogDetail(blogDetail);
+			blogList.setUserId(userId);
+			blogDao.save(blogList);
+			return true;
+		}
+	}
+	
+	// カウント用
+	public boolean updateViewCount(Long userId, Long blogId, Long count) {
+		BlogEntity blogList = blogDao.findByBlogId(blogId);
+		if(userId == null) {
+			return false;
+		}else {
+			blogList.setBlogId(blogId);
+			blogList.setViewCount(1L + count);
 			blogList.setUserId(userId);
 			blogDao.save(blogList);
 			return true;

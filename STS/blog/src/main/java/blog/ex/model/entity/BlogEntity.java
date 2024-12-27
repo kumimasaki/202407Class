@@ -112,7 +112,9 @@ public class BlogEntity {
 	 * フィールド変数で、userIdを表します。 private Long userId
 	 */
 	private Long userId;
-
+	
+	@Column(name = "view_count")
+	private Long viewCount;
 
 	/**
 	 * コンストラクターは、6つのパラメータを取ります。それぞれのパラメーターは以下の通りです。
@@ -128,13 +130,14 @@ public class BlogEntity {
 	 **/
 
 	public BlogEntity(@NonNull String blogTitle, @NonNull LocalDate registerDate, @NonNull String blogImage,
-			@NonNull String blogDetail, @NonNull String category, Long userId) {
+			@NonNull String blogDetail, @NonNull String category, Long userId, Long viewCount) {
 		this.blogTitle = blogTitle;
 		this.registerDate = registerDate;
 		this.blogImage = blogImage;
 		this.blogDetail = blogDetail;
 		this.category = category;
 		this.userId = userId;
+		this.viewCount = viewCount;
 	}
 
 
