@@ -12,12 +12,12 @@ import rp.com.services.ReportsService;
 @RequestMapping("/user/report")
 public class UserReportHideController {
 
-    @Autowired
-    private ReportsService reportsService;
+	@Autowired
+	private ReportsService reportsService;
 
-    @PostMapping("/hide")
-    public String hideReport(@RequestParam("reportId") Long reportId) {
-        reportsService.hideReportById(reportId);
-        return "redirect:/user/report/list";
-    }
+	@PostMapping("/hide")
+	public String hideReport(@RequestParam("reportId") Long reportId) {
+		reportsService.hideReportById(reportId);
+		return "redirect:/user/report/list";
+	}
 }

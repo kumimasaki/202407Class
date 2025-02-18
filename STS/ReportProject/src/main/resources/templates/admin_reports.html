@@ -20,6 +20,7 @@
 				<li class="item-list">
 					<img id="item-icon" th:src="@{${adminIconPath}}" alt="">
 				</li>
+				<li class="item-list" th:text="${admin.adminName}"></li>
 				<li class="item-list"><a th:href="@{/admin/info/edit/{adminId}(adminId=${admin.adminId})}">管理者情報変更</a>
 				</li>
 				<li class="item-list"><a th:href="@{/user/create}">ユーザー追加</a></li>
@@ -34,7 +35,7 @@
 		<div class="search-container">
 			<form th:action="@{/admin/search}" method="GET">
 				<label>報告事項一覧（検索結果）</label>
-				<input type="text" name="keyword" placeholder="検索内容．．．">
+				<input type="text" name="keyword" placeholder="検索ワードを入力してください">
 				<button type="submit" class="search-button">検索</button>
 			</form>
 		</div>
@@ -72,9 +73,12 @@
 					<p th:text="${report.contentsOfReport}">コンテンツ</p>
 				</div>
 				<div class="report-actions">
+					<div class="report-username" th:each="user : ${reportUsers}" th:if="${user.userId == report.userId}">
+						<p th:text="${user.userName}"></p>
+					</div>	
 					<div class="reporter-received">
-						<span th:if="${report.receiptFlg == 1}" class="received">受信済み</span>
 						<span th:if="${report.receiptFlg == 0}" class="unconfirmed">未確認</span>
+						<span th:if="${report.receiptFlg == 1}" class="received">受信済み</span>
 					</div>
 					<div class="detail-button-content">
 						<a th:href="@{/admin/report/details/{reportId}(reportId=${report.reportId})}"

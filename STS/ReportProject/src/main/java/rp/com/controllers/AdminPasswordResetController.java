@@ -23,25 +23,20 @@ public class AdminPasswordResetController {
 	}
 
 	// パスワード変更処理
-	 @PostMapping("/admin/password/reset/process")
-	    public String processPasswordReset(@RequestParam String adminEmail,
-	                                       @RequestParam String newPassword,
-	                                       Model model) {
-	        Admin admin = adminService.findByAdminEmail(adminEmail);
-	        
-	        //もし、adminが存在しない場合、エラーメッセージを出します
-	        if (admin == null) {
-	            model.addAttribute("errorMessage", "指定されたメールアドレスには存在しません。");
-	            return "admin_change_pw.html";
-	        }
+	@PostMapping("/admin/password/reset/process")
+	public String processPasswordReset(@RequestParam String adminEmail, @RequestParam String newPassword, Model model) {
+		Admin admin = adminService.findByAdminEmail(adminEmail);
 
-	        // パスワード変更処理
-	        adminService.updatePassword(admin, newPassword);
+		if (admin == null) {
+			model.addAttribute("errorMessage", "指定されたメールアドレスには存在しません。");
+			return "admin_change_pw.html";
+		}
 
-	        model.addAttribute("successMessage", "パスワードが変更されました。");
-	        return "admin_pw_changed.html"; 
-	    }
-	 
-	 
+		// パスワード変更処理
+		adminService.updatePassword(admin, newPassword);
+
+		model.addAttribute("successMessage", "パスワードが変更されました。");
+		return "admin_pw_changed.html";
+	}
 
 }

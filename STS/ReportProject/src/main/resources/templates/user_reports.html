@@ -17,10 +17,10 @@
             <li class="item-list">
                <img id="item-icon" th:src="@{'/' + ${users?.userIcon}}" >
             </li>
-            <li class="item-list"><a th:text="${users.userName}">ユーザー名前</a></li>
-            <li class="item-list"><a th:href="@{/user/report/list}">報告一覧</a></li>
-            <li class="item-list"><a th:href="@{/user/info/edit/{userId}(userId=${users.userId})}">情報変更</a></li>
-            <li class="item-list"><a th:href="@{/user/logout}">ログアウト</a></li>
+            <li class="item-list"><a class="link-user" th:text="${users.userName}">ユーザー名前</a></li>
+            <li class="item-list"><a class="link-user" th:href="@{/user/report/list}">報告一覧</a></li>
+            <li class="item-list"><a class="link-user" th:href="@{/user/info/edit/{userId}(userId=${users.userId})}">情報変更</a></li>
+            <li class="item-list"><a class="link-user" th:href="@{/user/logout}">ログアウト</a></li>
          </ul>
       </div>
    </header>
@@ -29,7 +29,7 @@
        <div class="search-container">
            <form th:action="@{/user/report/search}" method="get" id="search-form">
                <label>報告事項一覧（検索結果）</label>
-               <input type="text" name="keyword" placeholder="検索内容．．．">
+               <input type="text" name="keyword" placeholder="検索ワードを入力してください">
                <button type="submit">検索</button>
            </form>
        </div>

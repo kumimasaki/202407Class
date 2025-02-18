@@ -23,99 +23,84 @@ import rp.com.services.UserService;
 @RequestMapping("/admin")
 public class AdminReportListController {
 
-    @Autowired
-    private ReportsService reportsService;
+	@Autowired
+	private ReportsService reportsService;
 
-    @Autowired
-    private HttpSession session;
-    @Autowired
-    private UserService userService;
-    // レポート一覧画面を表示するメソッド
-    @GetMapping("/report/list")
-    public String showReportList(Model model) {
-        Admin admin = (Admin) session.getAttribute("loginAdminInfo");
-        Users users = (Users) session.getAttribute("loginUserInfo");
-        
-        
-        // 管理者がログインしていない場合、ログインページにリダイレクト
-        if (admin == null) {
-            return "redirect:/admin/login";
-        } else {
-            // 管理者IDに基づいてレポートリストを取得し、モデルに追加
-            List<Reports> reports = reportsService.getReportsByAdminId(admin.getAdminId());
-            model.addAttribute("reports", reports);
-            model.addAttribute("admin", admin);
-            model.addAttribute("user", users);
+	@Autowired
+	private HttpSession session;
+	@Autowired
+	private UserService userService;
 
-            // 管理者のアイコンパスと名前をモデルに追加
-            model.addAttribute("adminIconPath", admin.getAdminIconPath());
-			
+	// レポート一覧画面を表示するメソッド
+	@GetMapping("/report/list")
+	public String showReportList(Model model) {
+		Admin admin = (Admin) session.getAttribute("loginAdminInfo");
+		Users users = (Users) session.getAttribute("loginUserInfo");
+
+		if (admin == null) {
+			return "redirect:/admin/login";
+		} else {
+			// 管理者IDに基づいてレポートリストを取得し、モデルに追加
+			List<Reports> reports = reportsService.getReportsByAdminId(admin.getAdminId());
+			model.addAttribute("reports", reports);
+			model.addAttribute("admin", admin);
+			model.addAttribute("user", users);
 			// レポートのユーザー情報を取得してモデルに追加
-	        List<String> userNames = new ArrayList<>();
-	        for (Reports report : reports) {
-	            Long userId = report.getUserId(); // レポートに関連するユーザーIDを取得
-	            Users user = userService.getUserById(userId); // ユーザー情報を取得
-	            if (user != null) {
-	                userNames.add(user.getUserName());
-	            } else {
-	                userNames.add("Unknown User");
-	            }
-	        }
-	        model.addAttribute("userNames", userNames);
-            
-			
-			
-			return "admin_reports";
-        }
-    }
+			List<Users> reportUsers = userService.getAllUserList();
+			model.addAttribute("reportUsers", reportUsers);
 
-    // レポート検索の処理
-    @GetMapping("/search")
-    public String searchReports(@RequestParam("keyword") String keyword, Model model) {
-        Admin admin = (Admin) session.getAttribute("loginAdminInfo");
-        Users users = (Users) session.getAttribute("loginUserInfo");
-        
-        // 管理者がログインしていない場合、ログインページにリダイレクト
-        if (admin == null) {
-            return "redirect:/admin/login";
-        } else {
+			// 管理者のアイコンパスと名前をモデルに追加
+			model.addAttribute("adminIconPath", admin.getAdminIconPath());
 
-            
-            // 検索キーワードに基づいてレポートを検索し、結果をモデルに追加
-            List<Reports> searchResults = reportsService.searchReportsByTitleOrContent(keyword);
-            model.addAttribute("searchResults", searchResults);
-            
-            // 管理者IDに基づいてレポートリストを取得し、モデルに追加
-            List<Reports> reports = reportsService.getReportsByAdminId(admin.getAdminId());
-            model.addAttribute("reports", reports);
-            
-            // 管理者情報とアイコンパスをモデルに追加
-            model.addAttribute("admin", admin);
-            model.addAttribute("adminIconPath", admin.getAdminIconPath());
-            
-         // 各レポートに対応するユーザー情報を取得してモデルに追加
-            List<String> userNames = new ArrayList<>();
-            for (Reports report : reports) {
-                Long userId = report.getUserId(); // レポートに関連するユーザーIDを取得
-                Users user = userService.getUserById(userId); // ユーザー情報を取得
-                if (user != null) {
-                    userNames.add(user.getUserName());
-                } else {
-                    userNames.add("Unknown User");
-                }
-            }
-            model.addAttribute("userNames", userNames);
-            
-            return "admin_reports";
-        }
-    }
+			return "admin_reports.html";
+		}
+	}
 
+	// レポート検索の処理
+	@GetMapping("/search")
+	public String searchReports(@RequestParam("keyword") String keyword, Model model) {
+		Admin admin = (Admin) session.getAttribute("loginAdminInfo");
+		Users users = (Users) session.getAttribute("loginUserInfo");
 
-    // レポートを削除するメソッド
-    @PostMapping("/delete/report/{reportId}")
-    public String deleteReport(@PathVariable("reportId") Long reportId) {
-        // 指定されたIDのレポートを削除
-        reportsService.deleteReport(reportId);
-        return "redirect:/admin/report/list";
-    }
+		// 管理者がログインしていない場合、ログインページにリダイレクト
+		if (admin == null) {
+			return "redirect:/admin/login";
+		} else {
+
+			// 検索キーワードに基づいてレポートを検索し、結果をモデルに追加
+			List<Reports> searchResults = reportsService.searchReportsByTitleOrContent(keyword);
+			model.addAttribute("searchResults", searchResults);
+
+			// 管理者IDに基づいてレポートリストを取得し、モデルに追加
+			List<Reports> reports = reportsService.getReportsByAdminId(admin.getAdminId());
+			model.addAttribute("reports", reports);
+
+			// 管理者情報とアイコンパスをモデルに追加
+			model.addAttribute("admin", admin);
+			model.addAttribute("adminIconPath", admin.getAdminIconPath());
+
+			// 各レポートに対応するユーザー情報を取得してモデルに追加
+			List<String> userNames = new ArrayList<>();
+			for (Reports report : reports) {
+				Long userId = report.getUserId(); // レポートに関連するユーザーIDを取得
+				Users user = userService.getUserById(userId); // ユーザー情報を取得
+				if (user != null) {
+					userNames.add(user.getUserName());
+				} else {
+					userNames.add("Unknown User");
+				}
+			}
+			model.addAttribute("userNames", userNames);
+
+			return "admin_reports.html";
+		}
+	}
+
+	// レポートを削除するメソッド
+	@PostMapping("/delete/report/{reportId}")
+	public String deleteReport(@PathVariable("reportId") Long reportId) {
+		// 指定されたIDのレポートを削除
+		reportsService.deleteReport(reportId);
+		return "redirect:/admin/report/list";
+	}
 }

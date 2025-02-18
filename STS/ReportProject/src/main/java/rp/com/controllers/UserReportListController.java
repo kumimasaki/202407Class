@@ -56,7 +56,6 @@ public class UserReportListController {
             }
             model.addAttribute("adminNames", adminNames);
             
-            
             return "user_reports.html";
         }
     }

@@ -9,14 +9,12 @@ import jakarta.servlet.http.HttpSession;
 @Controller
 public class UserLogoutController {
 
-    @Autowired
-    private HttpSession session;
-    
-    //logout処理
-    @GetMapping("/user/logout")
-    public String userLogout() {
-        //sessionの無効化
-        session.invalidate();
-        return "redirect:/user/login";
-    }
+	@Autowired
+	private HttpSession session;
+
+	@GetMapping("/user/logout")
+	public String userLogout() {
+		session.invalidate();
+		return "redirect:/user/login";
+	}
 }

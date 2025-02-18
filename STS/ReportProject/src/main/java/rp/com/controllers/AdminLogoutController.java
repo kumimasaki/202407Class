@@ -12,10 +12,8 @@ public class AdminLogoutController {
     @Autowired
     private HttpSession session;
     
-    //logout処理
     @GetMapping("/admin/logout")
     public String adminLogout() {
-        //sessionの無効化
         session.invalidate();
         return "redirect:/admin/login";
     }

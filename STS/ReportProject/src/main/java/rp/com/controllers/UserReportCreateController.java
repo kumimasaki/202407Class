@@ -36,16 +36,13 @@ public class UserReportCreateController {
 	@Autowired
 	private HttpSession session;
 
-	// 報告登録画面を表示し、@return 報告登録画面のテンプレート名
 	@GetMapping("/user/report/create")
 	public String showReportCreateForm(Model model) {
-		// ログインしているユーザーの情報を取得
 		Users users = (Users) session.getAttribute("loginUserInfo");
 
 		List<Reports> reportList = reportsService.getAllReports();
 		model.addAttribute("reportList", reportList);
 
-		// ページに必要なデータを渡す
 		List<String> adminNames = adminService.getAllAdminNames();
 		model.addAttribute("adminNames", adminNames);
 		model.addAttribute("users", users);
@@ -67,7 +64,6 @@ public class UserReportCreateController {
 
 		Admin admin = adminService.getAdminName(adminName);
 		if (admin == null) {
-			// 管理者が存在しない場合の処理
 			model.addAttribute("message", "指定された管理者が存在しません。");
 			return "user_report_register.html";
 		}
@@ -87,15 +83,12 @@ public class UserReportCreateController {
 				Path path = Paths
 						.get("src/main/resources/static/uploads/directory/" + reportFileName.getOriginalFilename());
 				Files.write(path, bytes);
-				// ファイルアップロード成功時の処理
 				model.addAttribute("message", "ファイルがアップロードされました。");
 			} catch (IOException e) {
 				e.printStackTrace();
-				// ファイルアップロード失敗時の処理
 				model.addAttribute("message", "ファイルのアップロードに失敗しました。");
 			}
 		} else {
-			// ファイルが空の場合の処理
 			model.addAttribute("message", "ファイルが存在しません。");
 		}
 

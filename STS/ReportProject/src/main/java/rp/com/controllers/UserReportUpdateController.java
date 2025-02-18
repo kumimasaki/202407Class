@@ -10,6 +10,7 @@ import org.springframework.web.multipart.MultipartFile;
 import jakarta.servlet.http.HttpSession;
 import rp.com.models.entity.Reports;
 import rp.com.models.entity.Users;
+import rp.com.services.AdminService;
 import rp.com.services.ReportsService;
 
 import java.io.File;
@@ -26,43 +27,38 @@ public class UserReportUpdateController {
 	@Autowired
 	private ReportsService reportsService;
 
+	@Autowired
+	private AdminService adminService;
 
 	// 報告修正処理を行うメソッド
 	@PostMapping("/process")
 	public String processReportUpdate(@RequestParam("reportId") Long reportId, @RequestParam("title") String title,
 			@RequestParam("contentsOfReport") String contentsOfReport,
-			@RequestParam("reportFileName") MultipartFile file, @RequestParam("userName") String userName)
-			throws IOException {
+			@RequestParam("reportFileName") MultipartFile file, @RequestParam("userName") String userName,
+			@RequestParam("adminName") String adminName) throws IOException {
 		Optional<Reports> reportOptional = reportsService.getReportById(reportId);
 		if (reportOptional.isPresent()) {
 			Reports report = reportOptional.get();
 			report.setReportTitle(title);
 			report.setContentsOfReport(contentsOfReport);
 			report.setReportFileName(file.getOriginalFilename());
+			report.setAdminId(adminService.getAdminName(adminName).getAdminId());
 
-			//if (!file.isEmpty()) {
-				// ファイルをファイルシステムに保存
-				//String fileName = file.getOriginalFilename();
-				//String filePath = "path/to/save/files/" + fileName;
-				//file.transferTo(new File(filePath));
-			//}
-			
 			// ファイルアップロード処理
-	        if (!file.isEmpty()) {
-	            try {
-	                byte[] bytes = file.getBytes();
-	                Path path = Paths.get("src/main/resources/static/uploads/directory/" + file.getOriginalFilename());
-	                Files.write(path, bytes);
-	            } catch (IOException e) {
-	                e.printStackTrace();
-	            }
-	        }
+			if (!file.isEmpty()) {
+				try {
+					byte[] bytes = file.getBytes();
+					Path path = Paths.get("src/main/resources/static/uploads/directory/" + file.getOriginalFilename());
+					Files.write(path, bytes);
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
 
 			reportsService.saveReport(report);
-			// 成功時に報告一览ページにリダイレクト
 			return "redirect:/user/report/list";
 		} else {
-			return "redirect:/user/report/list"; // レポートが存在しない場合もレポート一覧ページにリダイレクトする
+			return "redirect:/user/report/list";
 		}
 	}
 }

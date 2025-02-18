@@ -4,7 +4,7 @@ header {
 	width: 100%;
 	top: 0;
 	padding: 8px ;
-	background-color: #5475a8b3;
+	background-color: #4682b4;
 	color: #fff;
 	left: 0;
 }
@@ -16,7 +16,9 @@ header {
 }
 
 #header-user{
-	background-color: #5b74beb3;
+	background-color: #fff;
+	color: #4682b4;
+	border: 3px, solid, #4682b4;
 }
 
 
@@ -65,13 +67,16 @@ a {
 	text-decoration: none;
 	color: white;
 }
-
+a.link-user {
+	text-decoration: none;
+	color: #4682b4;
+}
 
 /*footer全体のスタイル*/
 footer {
     position: relative;
     width: 100%;
-    background-color: #5475a8b3;
+    background-color: #4682b4;
     padding: 10px 0;
     text-align: center;
     color: #fff;
@@ -83,5 +88,5 @@ footer {
 	justify-content: center;/*itemを水平中央揃え*/
 }
 #footer-user{
-	background-color: #5b74beb3;
+	background-color: #4682b4;
 }

@@ -27,27 +27,24 @@ public class UserReportDetailsController {
 	private ReportsService reportsService;
 	@Autowired
 	private HttpSession session;
-    @Autowired
-    private AdminService adminService;
+	@Autowired
+	private AdminService adminService;
 
 	// レポート詳細ページを表示するメソッド
 	@GetMapping("/user/report/details")
-	public String showReportDetails(@RequestParam("reportId") Long reportId, Model model) {		
-		  Users users = (Users) session.getAttribute("loginUserInfo");
-		// IDに基づいてレポートを取得
+	public String showReportDetails(@RequestParam("reportId") Long reportId, Model model) {
+		Users users = (Users) session.getAttribute("loginUserInfo");
 		Optional<Reports> reportOptional = reportsService.getReportById(reportId);
 		if (reportOptional.isPresent()) {
 			Reports report = reportOptional.get();
 			model.addAttribute("report", report);
-		    model.addAttribute("users", users);	
-		    
-		    Long adminId = report.getAdminId(); 
-	        Admin admin = adminService.getAdminById(adminId);       
-	        model.addAttribute("admin", admin);
-	        
-			return "user_report_detail.html"; // ビュー名を返す
+			model.addAttribute("users", users);
+
+			Long adminId = report.getAdminId();
+			Admin admin = adminService.getAdminById(adminId);
+			model.addAttribute("admin", admin);
+			return "user_report_detail.html";
 		} else {
-			// レポートが見つからない場合、レポート一覧ページにリダイレクト
 			return "redirect:/user/report/list";
 		}
 	}
@@ -55,14 +52,12 @@ public class UserReportDetailsController {
 	// レポート編集ページを表示するメソッド
 	@GetMapping("/user/report/edit")
 	public String showEditReport(@RequestParam("reportId") Long reportId, Model model) {
-		// IDに基づいてレポートを取得
 		Optional<Reports> reportOptional = reportsService.getReportById(reportId);
 		if (reportOptional.isPresent()) {
 			Reports report = reportOptional.get();
 			model.addAttribute("report", report);
-			return "/user/edit_report"; // ビュー名を返す
+			return "/user/edit_report";
 		} else {
-			// レポートが見つからない場合、レポート一覧ページにリダイレクト
 			return "redirect:/user/report/list";
 		}
 	}
@@ -79,14 +74,12 @@ public class UserReportDetailsController {
 			report.setContentsOfReport(contentsOfReport);
 
 			if (!file.isEmpty()) {
-				// ファイルをファイルシステムに保存
 				String fileName = file.getOriginalFilename();
 				String filePath = "path/to/save/files/" + fileName;
 				file.transferTo(new File(filePath));
 				report.setReportFileName(fileName);
 			}
-
-			reportsService.saveReport(report); // saveReport メソッドを呼び出す
+			reportsService.saveReport(report);
 			return "redirect:/user/report/details?reportId=" + reportId;
 		} else {
 			return "redirect:/user/report/list";

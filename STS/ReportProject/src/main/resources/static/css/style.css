@@ -48,7 +48,7 @@ body {
    flex-grow: 1;
    flex-direction: column;
    align-items: center;
-   position: relative;
+   /*position: relative;*/
    left:60px;
    gap: 15px;
    display: flex;
@@ -63,7 +63,7 @@ body {
       display: flex;
       padding: 20px;
       width: 900px;
-      position: relative;
+      /*position: relative;*/
 }
 .user-image {
    width: 100px;
@@ -84,14 +84,14 @@ body {
    color: white;
    border: none;
    cursor: pointer;
-   position: relative;
+   /*position: relative;*/
    width: 80px;
    padding:5px;
    border-radius:3px ;  
    border: 1px solid #ccc; 
 }
 .detail-button{
-   background-color: #5475a8b3;
+   background-color: #4682b4;
    color: white;
    text-align: center;
    font-size: small;
@@ -106,12 +106,12 @@ body {
 
 /**********************************admin_reports画面************************************/ 
 .report-list {
-   padding-top: 30px;
+   padding-top: 5px;
    flex-grow: 1;
    flex-direction: column;
    align-items: center;
-   position: relative;
-   gap: 15px;
+   /*position: relative;*/
+   /*gap: 15px;*/
    display: flex;
 }
 .report-card {
@@ -121,9 +121,10 @@ body {
    width: 900px;
    display: flex;
    padding: 20px;
-   gap: 0 20px;  /* 单个报告方框内各个元素的gap设定 */
+   gap: 0 20px;
    align-items: center;
    border-radius:15px;
+   margin-bottom: 15px;
 }
 .report-image {
    width: 100px;
@@ -153,7 +154,7 @@ body {
    padding:3px;
    border-radius:3px ;
    color: #fff;
-   position:relative;
+   /*position:relative;*/
    margin-top: -10px;
    text-align: center;
 }
@@ -168,13 +169,16 @@ body {
    flex-direction: column;
    gap: 20px;
 }
-
 .reporter-received {
    display: flex;
    flex-direction: column;
    align-items: center;
    gap: 15px;
    margin-top: -15px; 
+}
+.report-username {
+   text-align: right;
+   margin-bottom: 20px;
 }
 .detail-button-content {
    display: flex;
@@ -206,16 +210,152 @@ body {
    display: block;
    margin-top: 10px; 
    text-align: right; 
-   position:relative;
- 
-  
+   position:relative;  
 }
 .report-button-content {
-   margin-top: 20px; 
-   display: flex;
-   justify-content: center;
-   position: relative; 
+   margin-left: 21%; 
+   /*display: flex;*/
+   /*justify-content: center;*/
+   /*position: relative; */
    left: -390px;
    margin-bottom: 15px;
 }
-/*********************************** user_reports画面************************************/ 
+
+/*********************************** user_create,user_info_edit画面************************************/ 
+
+.content {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 145px;
+}
+
+.container {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 2px solid #c9d3de;
+    border-radius: 40px;
+    margin-top: 20px;
+    background-color: #f8fafb;
+}
+
+.back-button {
+    display: block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color:  #5475a8;;
+    font-size: 16px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.form-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.icon-container {
+    text-align: center;
+    margin-right: 30px;
+    margin-left: 10px;
+}
+
+.icon-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.file-input {
+    display: none;
+}
+
+.file-label {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.input-fields {
+    flex-grow: 1;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    width: 400px;
+    
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline-color: #8a9ca5;
+}
+
+#input-button{
+    align-items: center;
+    position: relative;
+}
+.toggle-password{
+    background: none;
+    border: none;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    margin-top: -30px;
+    font-size: 20px;
+    color: #346189;
+}
+#fas{
+right: 700px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.cancel-button {
+    background-color: #f6d1c9;
+    border-color: #edb9a798;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+   
+}
+
+.submit-button {
+    background-color: #b2ebc3;
+    border-color: #b3e6c2;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 50px;
+}
+.error-message {
+    color: red;
+    text-align: center;
+    font-size: 13px;
+}
+
