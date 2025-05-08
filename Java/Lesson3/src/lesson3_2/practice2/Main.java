@@ -6,17 +6,17 @@ import java.util.List;
 public class Main {
 
 	public static void main(String[] args) {
-		// ArrayListを使用して、整数のリストを作成します。
+		// Listの宣言
 		List<Integer> list = new ArrayList<Integer>();
 		
-		// リストに以下の値を追加します：15, 20, 30, 45, 55。
+		// データの挿入
 		list.add(15);
         list.add(20);
         list.add(30);
         list.add(45);
         list.add(55);
 		
-		// リストから偶数の要素をすべて削除します。
+		// 偶数の要素をすべて削除
         for(int i = 0; i < list.size(); i++) {
         	if(list.get(i) % 2 == 0) {
         		list.remove(i);
@@ -25,7 +25,15 @@ public class Main {
         	System.out.println(list.get(i));
         }
         
-		// リストの全要素の合計を計算して表示します。
+        // 後ろからループすることで
+        // 削除によるインデックスずれの影響を受けない
+//        for (int i = list.size() - 1; i >= 0; i--) {
+//            if (list.get(i) % 2 == 0) {
+//            	list.remove(i); // 削除しても後ろには影響なし！
+//            }
+//        }
+        
+		// リストの全要素の合計を計算
         int sum = 0;
         for(int num : list) {
         	sum += num;

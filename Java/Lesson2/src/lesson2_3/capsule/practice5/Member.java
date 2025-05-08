@@ -11,7 +11,8 @@ public class Member {
 	}
 	
 	public int useCoupon(int price) {
-		return (int)(price * coupon.getRate());
+		double discount = price * coupon.getRate();
+		return (int) (price - discount);
 	}
 
 	public String getName() {

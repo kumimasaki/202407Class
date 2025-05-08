@@ -9,7 +9,7 @@ public class Main {
 		Student alice = new Student("Alice",18,"料理");
 		Student bob = new Student("Bob",28,"game");
 		
-		// helloメソッドを呼び出して、コンソールに表示してください
+		// helloメソッドを2回呼び出して、コンソールに表示してください
 		alice.hello();
 		bob.hello();
 	}

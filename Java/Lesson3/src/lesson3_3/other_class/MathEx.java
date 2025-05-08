@@ -1,6 +1,6 @@
-package lesson3_3.math_ex;
+package lesson3_3.other_class;
 
-public class Main {
+public class MathEx {
 
 	public static void main(String[] args) {
 		// 最大を求める

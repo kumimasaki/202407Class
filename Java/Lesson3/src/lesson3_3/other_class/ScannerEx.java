@@ -1,9 +1,9 @@
-package lesson3_3.scanner_ex;
+package lesson3_3.other_class;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Main {
+public class ScannerEx {
 
 	public static void main(String[] args) {
 		

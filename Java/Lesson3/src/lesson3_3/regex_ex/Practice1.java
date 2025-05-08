@@ -15,11 +15,13 @@ public class Practice1 {
 	
 	// isUsernameValidメソッド
 	public static boolean isUsernameValid(String userName) {
+		// 大文字と小文字の英文字と数字のみで長さは1以上
 		return userName.matches("[a-zA-Z0-9]+");
 	}
 	
 	// isPasswordValidメソッド
 	public static boolean isPasswordValid(String password) {
+		// 英文字、数字、アンダースコアのみで長さは8以上
 		return Pattern.matches("[a-zA-Z0-9_]{8,}", password);
 	}
 }

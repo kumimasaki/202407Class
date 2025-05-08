@@ -1,6 +1,6 @@
-package lesson3_3.string_builder_ex;
+package lesson3_3.other_class;
 
-public class Main {
+public class StringBuilderEx {
 
 	public static void main(String[] args) {
 		
@@ -13,7 +13,7 @@ public class Main {
 		// 文字列結合
 		sb.append("こんにちは。");
 		sb.append("今日はいい天気ですね。");
-		System.out.println(sb.toString());
+		System.out.println(sb);
 		
 		// 文字列挿入 9文字目直後に文字を挿入
 		sb.insert(9, "とても");

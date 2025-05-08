@@ -13,7 +13,7 @@ public class Ex2 {
 		System.out.println(name.length());
 		
 		// 練習問題
-		// 変数「name」「age」を初期化
+		// 変数「myName」「age」を初期化
 		// 値は自分の名前と年齢
 		String name1 = "Masaki";
 		char name2 = 'A';

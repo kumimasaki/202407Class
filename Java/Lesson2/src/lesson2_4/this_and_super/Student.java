@@ -18,4 +18,5 @@ public class Student extends Person{
 		System.out.println("student");
 		super.display();
 	}
+	
 }

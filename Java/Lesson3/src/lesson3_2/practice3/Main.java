@@ -17,6 +17,7 @@ public class Main {
 		for(Book b : books) {
 			if("フィクション".equals(b.getGenre())) {
 				 System.out.println(b);
+				 System.out.println("本のジャンルが「フィクション」の本:" + b.getTitle() + "," + b.getAuthor() + "," + b.getGenre());
 			}
 		}
 	}

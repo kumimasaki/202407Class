@@ -9,7 +9,7 @@ public class Main {
 		// 2つ目のインスタンス作成：半径 = 10.0
 		Circle b = new Circle(10.0);
 
-		// 円の面積を求めた結果をコンソールに表示してください。
+		// 円の面積を求めた結果をコンソールに2つ表示してください。
 		double result1 = a.area();
 		System.out.println(result1);
 		

@@ -24,6 +24,10 @@ public class Practice {
 		// 「私の数学の点数は55」
 		System.out.println("私の数学の点数は" + scores[1]);
 
+		
+		int a = 3;
+		int b = a += 5;
+		System.out.println(a + b);
 	}
 
 }

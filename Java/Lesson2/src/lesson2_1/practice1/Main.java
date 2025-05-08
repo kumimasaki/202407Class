@@ -9,7 +9,7 @@ public class Main {
 		Item coffee = new Item("コーヒー", 120);
 		Item orange = new Item("オレンジジュース", 150);
 		
-		// displayメソッドを呼び出して、コンソールに表示してください
+		// displayメソッドを2回呼び出して、コンソールに表示してください
 		coffee.display();
 		orange.display();
 	}

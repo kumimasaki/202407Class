@@ -70,7 +70,7 @@ public class NoTransaction {
 				System.err.println(
 						"Error happened when I try to access the database: " + properties.getProperty("url") + ".");
 				e.printStackTrace();
-				// 初期を破棄するロールバック処理を行う
+				// 処理を破棄するロールバック処理を行う
 				con.rollback();
 				System.out.println("ロールバックを実行しました");
 			}

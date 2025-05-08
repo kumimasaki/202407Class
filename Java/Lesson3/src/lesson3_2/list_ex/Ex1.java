@@ -35,9 +35,9 @@ public class Ex1 {
 		
 		System.out.println(studentNames);
 		
-		List<Integer> test = new ArrayList<Integer>();
-		test.add(1);
-		System.out.println(test);
+		List<Integer> nums = new ArrayList<Integer>();
+		nums.add(10);
+		System.out.println(nums.get(0));
 		
 	}
 }

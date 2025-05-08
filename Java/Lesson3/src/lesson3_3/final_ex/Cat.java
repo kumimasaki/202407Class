@@ -7,7 +7,7 @@ public class Cat {
 	private final String name;
 	
 	// 定数(必ず初期化が必要)
-	private final static int SCORE = 1;
+	private static final int CAT_AGE = 5;
 
 	// 2. コンストラクタで値を設定
 	public Cat(String name) {

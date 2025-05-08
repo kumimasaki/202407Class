@@ -15,33 +15,31 @@ public class LoginController {
 		model.addAttribute("error", false);
 		return "login.html";
 	}
-	
-//	@PostMapping("/login/process")
-//	public String login(@RequestParam String email, @RequestParam String password, Model model) {
-//		model.addAttribute("userEmail", email);
-//		model.addAttribute("userPassword", password);
-//		return "success.html";
-//	}
-	
+
 	@PostMapping("/login/process")
-	public ModelAndView login(@RequestParam String email, @RequestParam String password, ModelAndView mav) {
-		String[] test = {"aa", "bb", "cc", "dd"};
+	public String login(@RequestParam String email, @RequestParam String password, Model model) {
+		String[] test = { "aa", "bb", "cc", "dd" };
 		Cat cat = new Cat("Alice", 3);
-		
 		// もしメールアドレスが「test@test.com」で
 		// かつパスワードが「admin」だった場合は「success.html」を表示
-		if(email.equals("test@test.com") && password.equals("admin")) {
-			mav.addObject("userEmail", email);
-			mav.addObject("userPassword", password);
-			mav.addObject("array", test);
-			mav.addObject("alice", cat);
-			mav.setViewName("success.html");
-			return mav;
+		if (email.equals("test@test.com") && password.equals("admin")) {
+			model.addAttribute("userEmail", email);
+			model.addAttribute("userPassword", password);
+			model.addAttribute("array", test);
+			model.addAttribute("alice", cat);
+			return "success.html";
 		} else {
-			mav.addObject("error", true);
-			mav.setViewName("login.html");
-			return mav;
+			model.addAttribute("error", true);
+			return "login.html";
 		}
 	}
-	
+
+//	@PostMapping("/login/process")
+//	public ModelAndView login(@RequestParam String email, @RequestParam String password, ModelAndView mav) {
+//		mav.addObject("userEmail", email);
+//		mav.addObject("userPassword", password);
+//		mav.setViewName("success.html");
+//		return mav;
+//	}
+
 }

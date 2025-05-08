@@ -8,7 +8,7 @@ public class Main {
 		// 「Hana 80」
 		Student taro = new Student("Taro", 75);
 		Student hana = new Student("Hana", 80);
-		// showScoreメソッドを呼び出して、コンソールに表示してください
+		// showScoreメソッドを2回呼び出して、コンソールに表示してください
 		taro.showScore();
 		hana.showScore();
 	}

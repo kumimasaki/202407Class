@@ -20,7 +20,6 @@ public class Main {
 		// スコアが小さい⇒大きい順に並び替え
 		// 結果をリストにまとめて表示
 		System.out.println(
-				// ラインを作る
 				list.stream()
 						.filter(e -> e.getScore() < 60)
 						.sorted((s1, s2) -> s1.getScore() - s2.getScore()) // 小⇒大
@@ -34,7 +33,6 @@ public class Main {
 
 		// 最大値の求め方
 		System.out.println(
-				// ラインを作る
 				list.stream()
 						.max((m1, m2) -> m1.getScore() - m2.getScore()));
 	}

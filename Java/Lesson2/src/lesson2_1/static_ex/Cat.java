@@ -4,7 +4,7 @@ public class Cat {
 	
 	// statice変数（クラス変数）
 	static int counter = 0;
-	// staticのついていないメンバ変数
+	// staticのついていないメンバ変数（インスタンス変数）
 	String name;
 	
 	Cat(String name) {

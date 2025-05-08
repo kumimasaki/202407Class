@@ -7,7 +7,7 @@ public class Ex1 {
 	public static void main(String[] args) {
 		// stackの宣言
 		Stack<Integer> numList = new Stack<Integer>();
-		// データの追加
+		// データの挿入
 		numList.push(10);
 		numList.push(20);
 		numList.push(30);

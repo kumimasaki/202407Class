@@ -29,7 +29,7 @@ $(function(){
     //     console.log("ボタン１");
     // });
 
-    // addEventListner
+    // addEventListener
     $("#button1").on("click", () => {
         console.log("ボタン１");
         $("#text").css("color", "red");

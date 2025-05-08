@@ -20,7 +20,6 @@ public class Ex1 {
 		// 名前をabc順に
 		// Listにまとめて表示
 		System.out.println(
-				// ラインを作る
 				names.stream()
 						.distinct()
 						.filter(e -> e.length() > 3)
@@ -28,6 +27,11 @@ public class Ex1 {
 						.sorted()
 						.collect(Collectors.toList()));
 
+//		names.stream()
+//				.distinct()
+//				.filter(e -> e.length() > 3)
+//				.sorted()
+//				.forEach(e -> System.out.println(e));
 	}
 
 }

@@ -2,7 +2,7 @@ package lesson2_4.ex;
 
 public class Rectangle {
 
-	// 高さ　height
+	// 高さ height
 	protected double height;
 	// 幅 width
 	protected double width;

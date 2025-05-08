@@ -1,10 +1,13 @@
 package lesson3_2.practice4;
 
 public class Person {
-	
+	// メンバ変数
+	// 名前
 	private String name;
+	// 年齢
 	private int age;
 
+	// コンストラクタ
 	public Person(String name, int age) {
 		this.name = name;
 		this.age = age;

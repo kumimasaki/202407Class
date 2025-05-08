@@ -8,6 +8,4 @@ public class Main {
 		student1.study();
 		student2.study();
 	}
-	
-
 }

@@ -36,13 +36,13 @@ public class Practice1 {
 				BufferedWriter bw = new BufferedWriter(fileWriter);
 		) {
 			// 文字列をファイルに書き込む
-			//   書き込む内容：アイス、チョコ、グミ（改行あり）
-			bw.write("アイス");
+			//   書き込む内容：寿司、焼肉、ハンバーグ（改行あり）
+			bw.write("焼肉");
 			// 改行
 			bw.newLine();
-			bw.write("チョコ");
+			bw.write("寿司");
 			bw.newLine();
-			bw.write("グミ");
+			bw.write("ハンバーグ");
 		} catch(FileNotFoundException e) {
 			System.out.println("ファイルが見つかりませんでした。");
 			e.printStackTrace();
