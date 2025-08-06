@@ -19,7 +19,7 @@ public class Ex2 {
 		char name2 = 'A';
 		
 		int age = 1;
-		// コンソールに出力「私の名前は name です。年齢は age です。」
+		// コンソールに出力「私の名前は myName です。年齢は age です。」
 		System.out.println("私の名前は" + name1 + "です。年齢は" + age + "です。");
 		
 	}

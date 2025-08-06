@@ -14,7 +14,6 @@ public class Ex2 {
 		a[0][0] = 100;
 		System.out.println(a[0][0]);
 		System.out.println(b[0][0]);
-		
 	}
 
 }

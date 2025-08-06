@@ -12,7 +12,7 @@ public class AdditionalResourceWebConfiguration implements WebMvcConfigurer{
 	// addResourceHandlers(ResourceHandlerRegistry registry): 
 	// このメソッドは、静的リソースのリソースハンドラーを追加するために使用
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/images/**").addResourceLocations("file:images/");
+		registry.addResourceHandler("/images/**").addResourceLocations("file:images/");
     }
 	// ファイルを保存する場所を修正する（コントローラー）
 	// Path.of("./images/" + fileName)

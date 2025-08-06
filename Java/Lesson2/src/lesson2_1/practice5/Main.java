@@ -7,6 +7,7 @@ public class Main {
 		// コンストラクタに渡す値：8.0, 4.0, 10.0
 		Daikei daikei = new Daikei(8.0, 4.0, 10.0);
 		// メソッドを呼び出してコンソールに面積を表示する
+		// 実行結果「36.0」
 		System.out.println(daikei.getArea());
 	}
 }

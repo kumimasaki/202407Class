@@ -6,6 +6,6 @@ public interface Runnable {
 	String NAME = "kitty";
 	
 	// 振る舞い（抽象メソッド）
-//	public abstract void run();
+	// public abstract void run();
 	void run();
 }

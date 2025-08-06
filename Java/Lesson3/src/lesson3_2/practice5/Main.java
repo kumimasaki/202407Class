@@ -2,7 +2,6 @@ package lesson3_2.practice5;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Main {
 
@@ -17,12 +16,21 @@ public class Main {
 		fruits.add("fig");
 		fruits.add("grape");
 
+		//		List<String> fruits2 = List.of("apple", "banana", "cherry", 
+		//				"date", "elderberry", "fig", "grape");
+
 		// リストから長さが5文字以上かつ
 		// 最初の文字が'e'ではない
-		System.out.println(
-				fruits.stream()
-						.filter(f -> f.length() >= 5 && f.charAt(0) != 'e')
-						.collect(Collectors.toList()));
+		fruits.stream()
+				.filter(f -> f.length() >= 5 && f.charAt(0) != 'e')
+				.forEach(e -> System.out.println(e));
+
+//		.filter(f -> f.length() >= 5 && !f.startsWith("e"))
+		
+//		System.out.println(
+//				fruits.stream()
+//						.filter(f -> f.length() >= 5 && f.charAt(0) != 'e')
+//						.collect(Collectors.toList()));
 
 	}
 

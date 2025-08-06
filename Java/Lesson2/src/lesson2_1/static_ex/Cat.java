@@ -2,7 +2,7 @@ package lesson2_1.static_ex;
 
 public class Cat {
 	
-	// statice変数（クラス変数）
+	// static変数（クラス変数）
 	static int counter = 0;
 	// staticのついていないメンバ変数（インスタンス変数）
 	String name;

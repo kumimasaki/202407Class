@@ -11,7 +11,7 @@ age = "こんにちは";
 console.log(age);
 
 // べき乗の計算 2の3乗 結果をコンソールに出力
-console.log(2**3);
+console.log(2 ** 3);
 
 // 比較演算子
 let num = 30;

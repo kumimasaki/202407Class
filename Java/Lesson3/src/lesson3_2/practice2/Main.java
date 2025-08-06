@@ -17,10 +17,11 @@ public class Main {
         list.add(55);
 		
 		// 偶数の要素をすべて削除
+        // ブレークで止めるとi=1の時に30が表示されるのがおかしい
         for(int i = 0; i < list.size(); i++) {
         	if(list.get(i) % 2 == 0) {
         		list.remove(i);
-        		i--; // インデックスを調整
+//        		i--; // インデックスを調整
         	}
         	System.out.println(list.get(i));
         }

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adminログイン</title>
+    <link rel="stylesheet" th:href="@{/css/reset.css}">
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+
+<body>
+    <header class="pc">
+        <nav class="pc-nav">
+            <div class="pc-nav-left">
+                <a href=""><img th:src="@{/images/logo.png}" alt=""></a>
+            </div>
+            <div class="pc-nav-right">
+                <div><a href="#"><img src="#" alt=""></a></div>
+                <div><a href="#"><img src="#" alt=""></a></div>
+            </div>
+        </nav>
+    </header>
+
+    <header class="sp">
+        <nav class="sp-nav">
+            <div class="sp-nav-left">
+                <a href=""><img th:src="@{/images/logo.png}" alt=""></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Admin管理システム</h2>
+
+            <form th:action="@{/admin/login/process}" th:object="${adminLoginForm}" method="post">
+                <table>
+                    <tr>
+                        <th>メールアドレス</th>
+                        <td>
+                            <input type="text" th:field="*{adminEmail}">
+                            <div th:if="${#fields.hasErrors('adminEmail')}" th:errors="*{adminEmail}" class="error">
+                                <!-- エラー -->
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>パスワード</th>
+                        <td>
+                            <input type="password" th:field="*{password}">
+                            <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="error">
+                                <!-- エラー -->
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- 全体エラーメッセージ -->
+                <div th:if="${#fields.hasGlobalErrors()}" class="error">
+                    <p th:each="err : ${#fields.globalErrors()}" th:text="${err}">エラー</p>
+                </div>
+
+                <div class="submit-button">
+                    <button type="submit" id="login" class="active_btn">ログイン</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

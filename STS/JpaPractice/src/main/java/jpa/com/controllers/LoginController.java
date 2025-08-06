@@ -36,7 +36,7 @@ public class LoginController {
 		// ログインチェック
 		// もし、loginCheckの結果がtureの場合、「email」のデータを渡しwelcome.htmlを表示する
 		// そうでない場合、エラーの可否の情報を画面に渡す⇒login.htmlを表示
-		if(adminService.loginCheck(adminEmail, password)) {
+		if(adminService.validateAdmin(adminEmail, password)) {
 			model.addAttribute("email", adminEmail);
 			return "welcome.html";
 		} else {

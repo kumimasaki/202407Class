@@ -15,8 +15,9 @@ public class Main {
 		students.add(new Student("Dave",19,110123));
 		
 		// データの表示
-		for (Student a : students) {
-			System.out.println(a);
+		for (Student data : students) {
+			System.out.println(data);
+			System.out.println(data.getName());
 		}
 	}
 

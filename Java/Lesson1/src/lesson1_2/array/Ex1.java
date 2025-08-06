@@ -4,9 +4,11 @@ public class Ex1 {
 
 	public static void main(String[] args) {
 		// テストの点数を格納する配列を宣言
-		int[] scores;
+//		int[] scores;
 		// 要素を作成し、変数に格納する
-		scores = new int[5];
+//		scores = new int[5];
+		// 配列変数の宣言と代入を同時に行う
+		int[] scores = new int[5];
 		// 要素0番目の箱に値を入れる
 		scores[0] = 10;
 		// 要素3番目の箱に値:30を入れる

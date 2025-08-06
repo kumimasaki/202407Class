@@ -1,0 +1,49 @@
+package ec.com.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import ec.com.form.AdminLoginForm;
+import ec.com.models.entity.Admin;
+import ec.com.services.AdminService;
+import jakarta.servlet.http.HttpSession;
+
+@Controller
+public class AdminLoginController {
+	@Autowired
+	private AdminService adminService;
+	
+	//Sessionが使えるように宣言
+	@Autowired
+	private HttpSession session;
+	
+	//ログイン画面の表示
+	@GetMapping("/admin/login")
+	public String getAdminLoginPage(@ModelAttribute("adminLoginForm") AdminLoginForm form) {
+		return "admin_login.html";
+	}
+	
+	//ログイン処理
+	@PostMapping("/admin/login/process")
+	public String adminLoginProcess(@ModelAttribute("adminLoginForm") AdminLoginForm form) {
+		//loginCheckメソッドを呼び出してその結果をadminという変数に格納
+		Admin admin = adminService.loginCheck(form.getAdminEmail(), form.getPassword());
+		//もし、admin==nullログイン画面にとどまります。
+	   //そうでない場合は、sessionにログイン情報に保存
+		//商品一覧画面にリダイレクトする/product/list
+		
+		if(admin == null) {
+			return "admin_login.html";
+		}else {
+			session.setAttribute("loginAdminInfo", admin);
+//			model.addAttribute("username", admin.getAdminName());
+			return "redirect:/product/list";
+		}
+		
+	}
+
+}

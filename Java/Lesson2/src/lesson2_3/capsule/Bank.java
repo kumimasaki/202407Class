@@ -3,17 +3,21 @@ package lesson2_3.capsule;
 public class Bank {
 	// メンバ変数
 	// ユーザー名（公開）
-	public String username;
+	protected String username;
 	// 残高（非公開）
-	private int balanceOfBank;
+	protected int balanceOfBank;
 	// パスワード（非公開）
-	private int password;
+	protected int password;
 	
 	// コンストラクタ
 	public Bank(String username, int balanceOfBank, int password) {
 		this.username = username;
 		this.balanceOfBank = balanceOfBank;
 		this.password = password;
+	}
+	
+	protected void test() {
+		
 	}
 
 	// getter, setterを追加

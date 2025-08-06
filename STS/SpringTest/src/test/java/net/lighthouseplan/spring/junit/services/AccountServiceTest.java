@@ -53,13 +53,13 @@ public class AccountServiceTest {
 		assertFalse(accountService.validateAccount("Alice", "BBC12321"));
 	}
 	
-	// 登録成功
+	// 登録が成功し、trueが返されるテスト
 	@Test
 	public void testCreateAccount_NewAccount_True() {
 		assertTrue(accountService.createAccount("Ana", "1234"));
 	}
 	
-	// 登録失敗
+	// 登録が失敗し、falseが返されるテスト
 	@Test
 	public void testCreateAccount_ExistingUsername_False() {
 		assertFalse(accountService.createAccount("Alice", "ABC12345"));

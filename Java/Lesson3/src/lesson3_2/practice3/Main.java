@@ -14,6 +14,7 @@ public class Main {
 		books.add(new Book("こころ", "夏目漱石", "フィクション"));
 		
 		// 本のジャンルが  「フィクション」の本のみのデータを出力する
+		// equals の左側は固定（リテラルや null にならない値）にするのが安全で推奨される書き方
 		for(Book b : books) {
 			if("フィクション".equals(b.getGenre())) {
 				 System.out.println(b);

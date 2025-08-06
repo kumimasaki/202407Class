@@ -27,6 +27,7 @@ public class Ex1 {
 			break;
 		default:
 			System.out.println("凶");
+			break;
 		}
 	}
 

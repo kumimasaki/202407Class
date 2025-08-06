@@ -11,6 +11,7 @@ public class Circle implements Shape{
 		this.radius = radius;
 	}
 
+	// 面積計算メソッド
 	@Override
 	public double getArea() {
 		return radius * radius * 3.14;

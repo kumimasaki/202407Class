@@ -14,6 +14,7 @@ public class Rectangle implements Shape{
 		this.height = height;
 	}
 
+	// 面積計算メソッド
 	@Override
 	public double getArea() {
 		return width * height;

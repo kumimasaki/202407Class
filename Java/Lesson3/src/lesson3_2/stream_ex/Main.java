@@ -29,6 +29,7 @@ public class Main {
 		list.stream()
 				.filter(e -> e.getScore() < 60)
 				.sorted((s1, s2) -> s2.getScore() - s1.getScore()) // 大⇒小
+				.collect(Collectors.toList())
 				.forEach(a -> System.out.println("名前：" + a.getName() + " 点数：" + a.getScore()));
 
 		// 最大値の求め方

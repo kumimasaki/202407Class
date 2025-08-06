@@ -22,6 +22,13 @@ public class Ex2 {
 			}
 		}
 		
+		for (int[] score : allScore) {
+		    for (int value : score) {
+		        // 結果を表示
+		        System.out.println(value);
+		    }
+		}
+		
 	}
 
 }

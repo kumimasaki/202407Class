@@ -22,6 +22,14 @@ public class Practice3 {
 			}
 		}
 		return max;
+		
+//	    // 配列のすべての要素を順に取り出す
+//	    for (int value : arr) {
+//	        // もし現在の値がmaxより大きければ更新
+//	        if (value > max) {
+//	            max = value;
+//	        }
+//	    }
 	}
 
 }

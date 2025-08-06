@@ -15,6 +15,8 @@ public class Square extends Rectangle{
 	@Override
 	public void display() {
 		System.out.println("正方形の計算結果です。");
-		super.display();
+		System.out.println("面積：" + super.getArea() + 
+				"、周辺の長さ：" + getPerimeterLength());
+//		super.display();
 	}
 }

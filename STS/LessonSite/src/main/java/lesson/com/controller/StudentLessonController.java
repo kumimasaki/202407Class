@@ -139,6 +139,11 @@ public class StudentLessonController {
 		return "user_lesson_detail.html";
 	}
 
+	/*
+	 * カートに商品が入っているかチェックするメソッド
+	 * 
+	 * 既に同じ商品がカートに入っている場合、追加できないようにする
+	 */
 	public boolean isLessonExist(Long lessonId, LinkedList<LessonEntity> list) {
 		Iterator<LessonEntity> ite = list.iterator();
 		boolean isExist = false;
@@ -160,7 +165,8 @@ public class StudentLessonController {
 			return true;
 		}
 	}
-
+	
+	// ログインチェックメソッド
 	public String loginUserName() {
 		if (loginCheck() == true) {
 			StudentEntity student = (StudentEntity) session.getAttribute("student");
@@ -193,11 +199,15 @@ public class StudentLessonController {
 
 	}
 
+	/*
+	 * カートへ商品を追加するメソッド
+	 */
 	@PostMapping("/cart/all")
 	public String addCartPage(@RequestParam Long lessonId, Model model) {
-
+		// sessionに値が入っていない場合
 		if (session.getAttribute("cart") == null) {
 			LinkedList<LessonEntity> list = new LinkedList<LessonEntity>();
+			// lessonIdをもとに講座を取得しセッションに追加する
 			LessonEntity lessons = lessonService.findByLessonId(lessonId);
 			list.add(lessons);
 			session.setAttribute("cart", list);
@@ -210,7 +220,8 @@ public class StudentLessonController {
 				return "user_planned_application.html";
 			}
 		} else {
-
+			// sessionに値が入っている場合
+			// 既存のsessionに値を追加する
 			LinkedList<LessonEntity> list = (LinkedList<LessonEntity>) session.getAttribute("cart");
 			LessonEntity lessons = lessonService.findByLessonId(lessonId);
 			if (isLessonExist(lessonId, list)) {
@@ -228,12 +239,17 @@ public class StudentLessonController {
 
 	}
 
+	/*
+	 * カート一覧、申し込み予定講座を表示するメソッド
+	 */
 	@GetMapping("/show/cart")
 	public String getShowCartPage(Model model) {
 		if (session.getAttribute("cart") == null) {
+			// セッションに何もなければ空リストを渡す
 			LinkedList<LessonEntity> list = new LinkedList<LessonEntity>();
 			model.addAttribute("list", list);
 		} else {
+			// セッションにデータが入っていたら、データを渡す
 			LinkedList<LessonEntity> list = (LinkedList<LessonEntity>) session.getAttribute("cart");
 			model.addAttribute("list", list);
 		}
@@ -242,6 +258,9 @@ public class StudentLessonController {
 		return "user_planned_application.html";
 	}
 
+	/*
+	 * カートから講座を削除するメソッド
+	 */
 	@GetMapping("/cart/delete/{lessonId}")
 	public String getCartDelete(@PathVariable Long lessonId, Model model) {
 		LinkedList<LessonEntity> list = (LinkedList<LessonEntity>) session.getAttribute("cart");
@@ -252,7 +271,6 @@ public class StudentLessonController {
 			if (entity.getLessonId().equals(lessonId)) {
 				list.remove();
 				break;
-
 			}
 			idx++;
 		}
@@ -261,6 +279,9 @@ public class StudentLessonController {
 		return "redirect:/lesson/show/cart";
 	}
 
+	/*
+	 * 購入画面へ進むメソッド
+	 */
 	@GetMapping("/request")
 	public String getRequestPage(Model model) {
 		if (session.getAttribute("cart") == null) {
@@ -277,6 +298,9 @@ public class StudentLessonController {
 		return "user_apply_select_payment.html";
 	}
 
+	/*
+	 * 購入確認画面へ進むメソッド
+	 */
 	@PostMapping("/confirm")
 	public String getRequestConfirm(@RequestParam int payment, Model model) {
 		if (session.getAttribute("cart") == null) {
@@ -309,6 +333,9 @@ public class StudentLessonController {
 		return "user_confirm_apply_detail.html";
 	}
 
+	/*
+	 * 購入確定メソッド
+	 */
 	@GetMapping("/complete")
 	public String getComplete(Model model) {
 		LinkedList<LessonEntity> list = (LinkedList<LessonEntity>) session.getAttribute("cart");

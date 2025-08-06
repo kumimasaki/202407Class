@@ -15,3 +15,9 @@ button2.addEventListener("click", () =>{
 button3.addEventListener("click", () =>{
     label.innerHTML = "みかん";
 });
+
+// メソッド化してもOK
+// HTMLでonclick="apple()"
+// function apple(){
+//     label.innerHTML = "りんご";
+// }

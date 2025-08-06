@@ -4,15 +4,17 @@ public class Member {
 	// メンバ変数
 	private String name;
 	private Coupon coupon;
-	
+
 	// コンストラクタ
 	public Member(String name) {
 		this.name = name;
 	}
-	
+
+	// 割引価格計算メソッド
 	public int useCoupon(int price) {
-		double discount = price * coupon.getRate();
-		return (int) (price - discount);
+		return (int) (price * coupon.getRate());
+		//		double discount = price * coupon.getRate();
+		//		return (int) (price - discount);
 	}
 
 	public String getName() {

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理者登録</title>
+    <link rel="stylesheet" th:href="@{/css/reset.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+    <header>
+        <!--スマートフォン-->
+        <nav class="menu">
+            <div class="logo">
+                <a href="#"><img th:src="@{/images/logo.png}" alt=""></a>
+            </div>
+            <div class="menu-contents">
+                <div class="menu-inner">
+                    <ul>
+                        <li class="menu__item"><a href="/admin/login">ログイン</a></li>
+                        <li class="menu__item"><a href="/product/list">商品一覧</a></li>
+                    </ul>
+                </div>
+                <div class="menu-toggle_btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+        <!--pc-->
+        <nav class="pc">
+            <div class="pc-inner">
+                <div class="pc-logo">
+                    <a href="#"><img th:src="@{/images/logo.png}" alt=""></a>
+                </div>
+                <ul class="pc-list">
+                    <li class="pc-list__item"><a href="/admin/login">ログイン</a></li>
+                    <li class="pc-list__item"><a href="/product/list">商品一覧</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="main-inner">
+            <section class="register-section">
+                <h2>管理者登録</h2>
+
+                <form th:action="@{/admin/register/process}" th:object="${adminRegisterForm}" method="post">
+                    <div class="register-section-details">
+
+                        <div class="register-section-details_flex">
+                            <div>名前</div>
+                            <input type="text" th:field="*{adminName}">
+                            <div th:if="${#fields.hasErrors('adminName')}" th:errors="*{adminName}" class="error">
+                                <!-- エラー -->
+                            </div>
+                        </div>
+
+                        <div class="register-section-details_flex">
+                            <div>メールアドレス</div>
+                            <input type="text" th:field="*{adminEmail}">
+                            <div th:if="${#fields.hasErrors('adminEmail')}" th:errors="*{adminEmail}" class="error">
+                                <!-- エラー -->
+                            </div>
+                        </div>
+
+                        <div class="register-section-details_flex">
+                            <div>パスワード</div>
+                            <input type="password" th:field="*{password}">
+                            <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="error">
+                                <!-- エラー -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 全体エラーメッセージ -->
+                    <div th:if="${#fields.hasGlobalErrors()}" class="error">
+                        <p th:each="err : ${#fields.globalErrors()}" th:text="${err}">エラー</p>
+                    </div>
+
+                    <div class="register-section-details_flex">
+                        <button type="submit" class="register">登録</button>
+                        <button class="back-btn" onclick="history.back();" type="button">戻る</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <small>&copy; 2025 Izawa</small>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./js/common.js"></script>
+</body>
+
+</html>

@@ -30,11 +30,14 @@ public class Rectangle {
 	// 面積と周辺の長さを出力するメソッド「display」
 	// 戻り値、引数なし
 	// 処理内容：下記のようにコンソールに表示する
-	// "面積は"○○
-	// "周辺の長さは"○○
+	// 長方形の計算結果です。
+	// 面積：○○ 、周辺の長さ：○○
 	public void display() {
-		System.out.println("面積は" + getArea());
-		System.out.println("周辺の長さは" + getPerimeterLength());
+		System.out.println("長方形の計算結果です。");
+		System.out.println("面積：" + getArea() + 
+				"、周辺の長さ：" + getPerimeterLength());
+//		System.out.println("面積は" + getArea());
+//		System.out.println("周辺の長さは" + getPerimeterLength());
 	}
 	
 }

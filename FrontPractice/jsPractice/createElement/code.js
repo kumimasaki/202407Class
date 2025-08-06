@@ -48,8 +48,44 @@ btnEvent.addEventListener("click", () => {
     console.log("ボタン2をクリックしました");
 });
 
+
 // helloメソッドの作成
 // 処理内容：コンソールに「hello」を出力
 function hello(){
     console.log("hello");
 }
+
+// クリックイベント
+document.getElementById("btnClick").addEventListener("click", () => {
+    console.log("クリックされました");
+});
+
+// ダブルクリックイベント
+// イベント名「dblclick」
+// 出力内容：「ダブルクリックされました」
+document.getElementById("btnDblClick").addEventListener("dblclick", () => {
+    console.log("ダブルクリックされました");
+});
+
+// 入力イベント（キーボード入力）
+document.getElementById("textInput").addEventListener("input", (e) => {
+    // e は「イベントオブジェクト」で、何が起きたかの情報が入っている
+    // e.target は「そのイベントが起きた要素」（ここでは input 要素）
+    // .value はその入力欄に今入っている文字列
+    console.log("入力されました:", e.target.value);
+});
+
+// セレクトボックスの選択イベント
+document.getElementById("selectMenu").addEventListener("change", (e) => {
+    console.log("選択された値:", e.target.value);
+});
+
+// マウスが要素に乗ったとき
+document.getElementById("hoverBox").addEventListener("mouseover", () => {
+    console.log("マウスがのりました");
+});
+
+// マウスが要素から離れたとき
+document.getElementById("hoverBox").addEventListener("mouseout", () => {
+    console.log("マウスが離れました");
+});

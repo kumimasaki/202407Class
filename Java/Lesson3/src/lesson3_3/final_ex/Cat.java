@@ -16,6 +16,7 @@ public class Cat {
 	// すべてのコンストラクタで値を代入する必要がある
 	public Cat() {
 		this.name = "Alice";
+//		this("Alice");
 	}
 
 }

@@ -7,6 +7,11 @@ import java.util.Map;
 
 public class MenuManager {
 	
+	//	map = {
+	//	  "sandwich" : ["ハンバーガー", "チーズバーガー"],
+	//	  "drink"    : ["コーラ", "ミネラルウォーター"],
+	//	  "sidemenu" : ["ポテト", "ナゲット"]
+	//	}
 	private Map<String, List<String>> map = new HashMap<>();
 
 	public MenuManager() {
@@ -34,9 +39,13 @@ public class MenuManager {
 
 	// ここに searchMenu を作成する。
 	public void searchMenu(String menu) {
+		// map.keySet() は Map<String, List<String>> の全てのキー（カテゴリ名）を取得
+		// for文で、それぞれのカテゴリ（key）を1つずつ順番に取り出して処理
 		for (String key : map.keySet()) {
+			// map.get(key) は、現在のカテゴリに対応するメニュー一覧（List<String>） を取得
 			if (map.get(key).contains(menu)) {
 				System.out.println(menu + "は" + key + "に含まれています。");
+				// 見つかった時点でメソッドを終了させる
 				return;
 			}
 		}
@@ -45,6 +54,7 @@ public class MenuManager {
 
 	// ここに setMenu を作成する。
 	public void setMenu(String category, String menu) {
+		// map.get(category):指定したカテゴリに対応するメニュー一覧（List）を取得
 		map.get(category).add(menu);
 	}
 
